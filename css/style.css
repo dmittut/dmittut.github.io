@@ -1874,7 +1874,7 @@ body::after {
     margin-bottom: 7.5rem
   }
 }
-@media (min-width:1024px) {
+@media (min-width:1024.98px) {
   .search-input {
     min-height: 3.25rem;
     font-size: 1.25rem
@@ -1967,7 +1967,7 @@ body::after {
     margin-bottom: .625rem
   }
 }
-@media (min-width:1024px) and (min-width:108.25em) {
+@media (min-width:1024.98px) and (min-width:108.25em) {
   .main-page__content .content-main__banners .slide__banner img {
     height: 25.5rem
   }
@@ -2005,10 +2005,10 @@ body::after {
 }
 @media (max-width:90em) {
   .header-contacts__phone {
-    font-size: .625rem
+    font-size: .8125rem
   }
   .header-contacts__schedule {
-    font-size: .5rem
+    font-size: .625rem
   }
 }
 @media (max-width:1100px) {
@@ -2016,7 +2016,7 @@ body::after {
     font-size: 1rem!important
   }
 }
-@media (max-width:1024px) {
+@media (max-width:1024.98px) {
   .search-input {
     min-height: 2.75rem;
     font-size: .75rem
@@ -2309,7 +2309,7 @@ body::after {
     height: max-content
   }
 }
-@media (max-width:1024px) and (any-hover:none) {
+@media (max-width:1024.98px) and (any-hover:none) {
   .header .icon-menu {
     cursor: default
   }
@@ -2843,7 +2843,7 @@ body::after {
     grid-column: 3/3
   }
 }
-@media (min-width:1024px) and (min-width:20em) and (max-width:108.25em) {
+@media (min-width:1024.98px) and (min-width:20em) and (max-width:108.25em) {
   @supports (height:clamp(13rem ,10.1671388102rem + 14.164305949vw ,25.5rem)) {
     .main-page__content .content-main__banners .slide__banner img {
       height: clamp(13rem ,10.1671388102rem + 14.164305949vw ,25.5rem)
@@ -2865,7 +2865,7 @@ body::after {
     }
   }
 }
-@media (min-width:1024px) and (max-width:20em) {
+@media (min-width:1024.98px) and (max-width:20em) {
   .main-page__content .content-main__banners .slide__banner img {
     height: 13rem
   }
