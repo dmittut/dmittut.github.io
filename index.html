@@ -1,0 +1,1521 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>HomePage</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<style>
+		body {
+			opacity: 0;
+		}
+
+		.loaded body {
+			opacity: 1;
+		}
+	</style>
+	<link rel="stylesheet" href="css/style.min.css?_v=20240722180534">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://cdn.tailwindcss.com?_v=20240722180534"></script>
+	<script>
+		tailwind.config = {
+			theme: {
+				extend: {
+					colors: {
+						red: '#CF102D'
+					},
+					screens: {
+						'sm': '640px',
+						// => @media (min-width: 640px) { ... }
+
+						'md': '768px',
+						// => @media (min-width: 768px) { ... }
+
+						'lg': '1024px',
+						// => @media (min-width: 1024px) { ... }
+
+						'xl': '1440px',
+						// => @media (min-width: 1280px) { ... }
+
+						'2xl': '1536px',
+						// => @media (min-width: 1536px) { ... }
+					},
+				},
+			},
+		}
+	</script>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+
+			<div class="header__content">
+				<div class="header__top top-header">
+					<div class="top-header__container">
+						<div class="top-header__content">
+							<div class="top-header__place-mob flex items-center gap-2">
+								<div class="header-logo--mob">
+									<div class="xl:text-2xl lg:text-lg text-[.625rem] lg:!none leading-3 text-black uppercase font-medium">
+										<p>интернет - магазин автомасел и запчастей</p>
+									</div>
+
+								</div>
+							</div>
+							<button type="button" class="menu__icon">
+								<div class="icon-menu">
+									<span></span>
+								</div>
+							</button>
+						</div>
+
+					</div>
+				</div>
+				<div class="header__center center-header">
+					<div class="header-logo">
+						<div class="header-logo__container">
+							<div class="flex items-center gap-3 justify-between">
+								<div class="flex items-center">
+									<a href="#" class="logo">
+
+										<picture>
+											<source media="(max-width:480px)" srcset="img/logo-mob.webp">
+											<img src="img/logo.webp" alt="Logo">
+										</picture>
+									</a>
+									<div class="header-logo__text xl:text-2xl lg:text-lg text-white uppercase lg:pl-14 pl-10 font-medium">
+										<p>интернет - магазин автомасел и запчастей</p>
+									</div>
+								</div>
+
+								<div class="center-header__actions header-contacts flex flex-col text-center">
+									<a class="header-contacts__phone text-white leading-none mb-1" href="tel:+78722550506">+7 (8722) 55-05-06</a>
+									<span class="header-contacts__schedule block text-white leading-none">пн—пт с 9:00 до 18:00</span>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<div class="header__bottom bottom-header md:mt-8 mt-5 md:mb-4 mb-6">
+					<div class="bottom-header__container">
+						<div class="bottom-header__content flex items-center gap-4 lg:justify-between">
+							<div class="bottom-header__actions grid grid-cols-2 gap-2 items-center md:none">
+								<button type="button" class="button button-lg button-primary button-catalog">
+									<span>Каталог</span>
+									<span>Закрыть</span>
+								</button>
+								<div class="search-block">
+									<div class="search-block-group input-group">
+										<input type="text" class="search-input" placeholder="Поиск по сайту">
+										<button type="button" class="input-group-button">
+											<svg class="action-item__svg">
+												<use xlink:href="img/icons/icons.svg#search"></use>
+											</svg>
+										</button>
+									</div>
+
+								</div>
+							</div>
+							<div class="header__location location-block" data-da=".top-header__place-mob, 992, first">
+								<button type="button" class="location-block__button">
+
+									Махачкала
+								</button>
+								<div class="location-block__list">
+									<ul>
+										<li>
+											<a href="#">
+												Бунайск
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Дербент
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Каспийск
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="header__menu menu">
+
+								<nav class="menu__body">
+									<ul>
+										<li>
+											<a href="#">
+												Компания
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												СТО
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Бренды
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												СССР
+
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Новости
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Акции
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Каталог
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Личный кабинет
+											</a>
+										</li>
+									</ul>
+								</nav>
+								<div class="contacts-block lg:hidden">
+									<div class="contacts-block__line">
+										<span class="text-red font-extralight text-sm">
+											Телефон
+										</span>
+										<ul>
+											<li>
+												<a href="tel:+78722550506">
+													+7 (8722) 55-05-06
+
+												</a>
+											</li>
+											<li>
+												<a href="tel:+79887940000">
+													+7 (988)794-00-00
+												</a>
+											</li>
+										</ul>
+									</div>
+									<div class="contacts-block__line">
+										<span class="text-red font-extralight text-sm">
+											Электронная почта
+
+										</span>
+										<ul>
+											<li>
+												<a href="mailto:magma1962@yandex.ru">
+													magma1962@yandex.ru
+
+												</a>
+											</li>
+										</ul>
+									</div>
+									<div class="contacts-block__line">
+										<span class="text-red font-extralight text-sm">
+											Адрес
+
+										</span>
+										<ul>
+											<li>
+												г. Махачкала, пр. Казбекова, д. 306
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="header-actions" data-da=".top-header__place-mob, 600, last">
+								<div class="header-actions__list">
+									<a href="#" class="header-actions__item action-item">
+										<div class="action-item__icon">
+											<svg class="action-item__svg">
+												<use xlink:href="img/icons/icons.svg#favorite"></use>
+											</svg>
+										</div>
+										<span class="action-item__caption">
+											Избранное
+										</span>
+									</a>
+									<a href="#" class="header-actions__item action-item">
+										<div class="action-item__icon">
+											<svg class="action-item__svg">
+												<use xlink:href="img/icons/icons.svg#cart"></use>
+											</svg>
+										</div>
+										<span class="action-item__caption">
+											Корзина
+										</span>
+									</a>
+									<a href="#" class="header-actions__item action-item">
+										<div class="action-item__icon">
+											<svg class="action-item__svg">
+												<use xlink:href="img/icons/icons.svg#user"></use>
+											</svg>
+										</div>
+										<span class="action-item__caption">
+											Войти
+										</span>
+									</a>
+								</div>
+							</div>
+							<!-- /.header-actions -->
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</header>
+		<div class="catalog-menu">
+
+			<div class="catalog-menu__container">
+				<div class="catalog-menu__content">
+					<div class="catalog-menu__sidebar">
+						<div class="md:flex grid sm:grid-cols-2 md:flex-col gap-3 lg:mb-10 mb-5">
+							<div class="search-block search-block--red">
+								<div class="search-block-group input-group">
+									<input type="text" class="search-input input" placeholder="Поиск по каталогу">
+									<button type="button" class="input-group-button">
+										<svg class="action-item__svg">
+											<use xlink:href="img/icons/icons.svg#search"></use>
+										</svg>
+									</button>
+								</div>
+
+							</div>
+							<select name="form[]" data-class-modif="form">
+								<option value="1" selected>Популярные</option>
+								<option value="2">Пункт №2</option>
+								<option value="3">Пункт №3</option>
+								<option value="4">Пункт №4</option>
+							</select>
+						</div>
+						<div class="catalog-menu__brands">
+							<ul>
+								<li>
+									<a href="#">
+										Лукойл
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Mahle
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										WD-40
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Mannol
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Nibk
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Big filter
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Rowe
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Teboil
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Sakura
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Kixx
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Mitsumoro
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Lavr
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Kudo
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Fortech
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Kerry
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										JS Asakashi
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										ВОСХОД
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Poxipol
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Torch
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										SCT
+									</a>
+								</li>
+
+							</ul>
+						</div>
+					</div>
+					<div class="catalog-menu__body">
+						<div class="catalog-menu__list">
+							<div data-spollers="991.98, max" class="spollers spollers-type-one">
+								<details class="spollers__item">
+									<summary class="spollers__title">Лукойл</summary>
+									<div class="spollers__body">
+										<ul>
+											<li>
+												<a href="#">
+													Genesis Armortech (587)
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													Genesis Armortech (587)
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													Genesis Special (873)
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													Genesis Universal (126)
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													Авангард (87)
+												</a>
+											</li>
+											<li>
+												<a href="#">
+
+													Авангард Профессионал (311)
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													ГОСТ Дизель (246)
+												</a>
+											</li>
+										</ul>
+									</div>
+								</details>
+							</div>
+							<div data-spollers="991.98, max" class="spollers spollers-type-one">
+								<details class="spollers__item">
+									<summary class="spollers__title">Расходные материалы</summary>
+									<div class="spollers__body">
+										<ul>
+											<li>
+												<a href="#">
+													Фильтры автомобильные
+
+
+
+
+
+
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													BIG FILTER
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													Carberry
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													DIFA
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													Fortech / Nac
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													KNECHT / MAHLE
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													Mann, Hengst, Filtron
+												</a>
+											</li>
+										</ul>
+									</div>
+								</details>
+							</div>
+							<div data-spollers="991.98, max" class="spollers spollers-type-one">
+								<details class="spollers__item">
+									<summary class="spollers__title">Смазочные материалы</summary>
+									<div class="spollers__body">
+										<ul>
+											<li>
+												<a href="#">
+													Teboil
+
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													Mannol
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													ATF / Трансмиссия
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													Автохимия
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													Антифриз / Мото 2Т-4Т / Автожидкости
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													Индустриальные масла
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													Моторные масла для грузовых авто
+												</a>
+											</li>
+										</ul>
+									</div>
+								</details>
+							</div>
+							<div data-spollers="991.98, max" class="spollers spollers-type-one">
+								<details class="spollers__item">
+									<summary class="spollers__title">Охлаждающие и технические жидкости</summary>
+									<div class="spollers__body">
+										<ul>
+											<li>
+												<a href="#">
+													Coolstream / Niagara / UNIX
+													Mannol
+
+
+
+
+
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													Mannol
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													Антифриз / Мото 2Т-4Т / Автожидкости
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													ЛУКОЙЛ
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													Автохимия / Автокосметика
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													Антифриз / Тосол / Стеклоомывайка
+												</a>
+											</li>
+										</ul>
+									</div>
+								</details>
+							</div>
+							<div data-spollers="991.98, max" class="spollers spollers-type-one">
+								<details class="spollers__item">
+									<summary class="spollers__title">Автокраски и эмали</summary>
+									<div class="spollers__body">
+										<ul>
+											<li>
+												<a href="#">
+													Donewell
+
+
+
+
+
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													KUDO
+												</a>
+											</li>
+
+										</ul>
+									</div>
+								</details>
+								<details class="spollers__item">
+									<summary class="spollers__title">Автолампы</summary>
+									<div class="spollers__body">
+										<ul>
+											<li>
+												<a href="#">
+													MITSUMORO
+
+
+
+
+
+
+
+
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													SCT
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													Восход
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													Прочие
+												</a>
+											</li>
+										</ul>
+									</div>
+								</details>
+							</div>
+							<div data-spollers="991.98, max" class="spollers spollers-type-one">
+								<details class="spollers__item">
+									<summary class="spollers__title">Автохимия и Автокосметика</summary>
+									<div class="spollers__body">
+										<ul>
+											<li>
+												<a href="#">
+													Lavr (332)
+
+
+
+
+
+
+
+
+
+
+
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													Валера (122)
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													Kerry (248)
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													Eltrans (185)
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													Dry Monster (75)
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													Ароматизаторы 323
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													Aroma Top Line
+
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													KUDO - Автокраски (467)
+
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													WD-40 (55)
+												</a>
+											</li>
+										</ul>
+									</div>
+								</details>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<!-- /.catalog-menu -->
+		<main class="page">
+			<section class="main-page">
+				<div class="main-page__container">
+					<div class="main-page__wrapper relative catalog-menu-wrap">
+						<aside class="main-page__sidebar sidebar-main">
+							<div class="sidebar-main__body">
+								<div class="sidebar-main__header flex flex-col gap-2 items-start mb-5">
+									<button type="button" class="button button-lg button-primary button-catalog">
+										<span>Каталог</span>
+										<span>Закрыть</span>
+									</button>
+									<div class="search-block">
+										<div class="search-block-group input-group">
+											<input type="text" class="search-input" placeholder="Поиск по сайту">
+											<button type="button" class="input-group-button">
+												<svg class="action-item__svg">
+													<use xlink:href="img/icons/icons.svg#search"></use>
+												</svg>
+											</button>
+										</div>
+
+									</div>
+								</div>
+								<div class="sidebar-main__content">
+									<div data-showmore="items" class="sidebar-brands">
+										<div data-showmore-content="5" class="sidebar-brands__content">
+											<ul>
+												<li><a href="#">Лукойл</a></li>
+												<li>
+													<a href="#">
+														Toboil
+
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														Rowe
+
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														Mannol
+
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														Lomarc
+
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														Sakura
+
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														Masuma
+													</a>
+												</li>
+
+											</ul>
+										</div>
+										<button hidden data-showmore-button type="button" class="sidebar-brands__more"><span>Показать больше</span><span>Скрыть</span></button>
+									</div>
+								</div>
+
+							</div>
+						</aside>
+						<div class="main-page__content content-main">
+							<div class="content-main__banners banners-main section-margin-b-md">
+								<div class="banners-main__content">
+									<div class="banners-main__mob">
+										<div class="banners-main__slide swiper-slide slide slide-info slide-login">
+											<div class="slide__title mb-4">
+												Личный кабинет
+											</div>
+											<div class="slide__body">
+
+												<div class="slide__content">
+													<span>Совершайте покупки, получайте бонусы, отслеживайте заказы</span>
+
+												</div>
+												<div class="slide__footer">
+													<a href="#" class="button button-lg button-white">Войти</a>
+												</div>
+											</div>
+										</div>
+
+									</div>
+									<div class="banners-main__slider swiper">
+										<div class="banners-main__wrapper swiper-wrapper">
+
+											<div class="banners-main__slide swiper-slide slide slide-info slide-login">
+												<div class="slide__title mb-4">
+													Личный кабинет
+												</div>
+												<div class="slide__body">
+
+													<div class="slide__content">
+														<span>Совершайте покупки, получайте бонусы, отслеживайте заказы</span>
+
+													</div>
+													<div class="slide__footer">
+														<a href="#" class="button button-lg button-white">Войти</a>
+													</div>
+												</div>
+											</div>
+
+
+											<div class="banners-main__slide swiper-slide slide slide-info slide-certificates">
+												<div class="slide__title mb-4">
+													Сертификаты
+												</div>
+												<div class="slide-certificates__slider swiper">
+													<div class="slide-certificates__wrapper swiper-wrapper">
+														<div class="slide-certificates__slide swiper-slide slide slide-banner">
+															<div class="slide__banner">
+																<img src="img/banners/01.webp" alt="Image">
+															</div>
+														</div>
+														<div class="slide-certificates__slide swiper-slide slide slide-banner">
+															<div class="slide__banner">
+																<img src="img/banners/01.webp" alt="Image">
+															</div>
+														</div>
+														<div class="slide-certificates__slide swiper-slide slide slide-banner">
+															<div class="slide__banner">
+																<img src="img/banners/01.webp" alt="Image">
+															</div>
+														</div>
+														<div class="slide-certificates__slide swiper-slide slide slide-banner">
+															<div class="slide__banner">
+																<img src="img/banners/01.webp" alt="Image">
+															</div>
+														</div>
+													</div>
+													<div class="slider-pagination-1">
+														<div class="swiper-pagination"></div>
+													</div>
+
+												</div>
+											</div>
+
+											<div class="banners-main__slide swiper-slide slide slide-banner slide-promo">
+												<div class="slide__title mb-4">
+													Акции
+												</div>
+												<a href="#" class="slide__banner">
+													<img src="img/banners/02.webp" alt="Image">
+												</a>
+											</div>
+											<div class="banners-main__slide swiper-slide slide slide-banner slide-promo">
+
+												<a href="#" class="slide__banner">
+													<img src="img/banners/03.webp" alt="Image">
+												</a>
+											</div>
+											<div class="banners-main__slide swiper-slide slide slide-info slide-news">
+												<div class="slide__title mb-4">
+													Новости
+												</div>
+												<a href="#" class="slide__body">
+
+													<div class="slide__content">
+														<span>Открытие кафе на территории сервис зоны на Казбекова.</span>
+
+													</div>
+													<div class="slide-news__image">
+														<img src="img/banners/image.webp" alt="Image">
+													</div>
+												</a>
+											</div>
+											<div class="banners-main__slide swiper-slide slide slide-info slide-news">
+
+												<a href="#" class="slide__body">
+
+													<div class="slide__content">
+														<span>Дилерство Teboil и Lemarc</span>
+
+													</div>
+													<div class="slide-news__image">
+														<img src="https://picsum.photos/200/300" alt="Image">
+													</div>
+												</a>
+											</div>
+
+										</div>
+										<button type="button" class="swiper-button-prev slider-button-1">
+											<svg xmlns="http://www.w3.org/2000/svg" width="12" height="20" viewBox="0 0 12 20" fill="none">
+												<line y1="-0.5" x2="14.085" y2="-0.5" transform="matrix(-0.725276 -0.688458 -0.725276 0.688458 11 20)" stroke="#A1A1A1" />
+												<line y1="-0.5" x2="14.5089" y2="-0.5" transform="matrix(0.704086 -0.710115 -0.745737 -0.66624 0.78418 10.303)" stroke="#A1A1A1" />
+											</svg>
+										</button>
+										<button type="button" class="swiper-button-next slider-button-1">
+											<svg xmlns="http://www.w3.org/2000/svg" width="12" height="20" viewBox="0 0 12 20" fill="none">
+												<line y1="-0.5" x2="14.085" y2="-0.5" transform="matrix(0.725276 -0.688458 0.725276 0.688458 1 20)" stroke="#A1A1A1" />
+												<line y1="-0.5" x2="14.5089" y2="-0.5" transform="matrix(-0.704086 -0.710115 0.745737 -0.66624 11.2158 10.303)" stroke="#A1A1A1" />
+											</svg>
+										</button>
+
+									</div>
+								</div>
+							</div>
+							<!-- /.content-main__banners -->
+							<div class="content-main__partners partners-main section-margin-b-md">
+
+								<div class="partners-main__slider swiper">
+									<div class="partners-main__wrapper swiper-wrapper">
+										<!-- Слайд -->
+										<div class="partners-main__slide swiper-slide slide slide-bg-white">
+											<img src="img/partners/partner-1.webp" alt="Image">
+										</div>
+										<div class="partners-main__slide swiper-slide slide slide-bg-white">
+											<img src="img/partners/partner-2.webp" alt="Image">
+										</div>
+										<div class="partners-main__slide swiper-slide slide slide-bg-white">
+											<img src="img/partners/partner-4.webp" alt="Image">
+										</div>
+										<div class="partners-main__slide swiper-slide slide slide-bg-white">
+											<img src="img/partners/partner-5.webp" alt="Image">
+										</div>
+										<div class="partners-main__slide swiper-slide slide slide-bg-white">
+											<img src="img/partners/partner-6.webp" alt="Image">
+										</div>
+										<div class="partners-main__slide swiper-slide slide slide-bg-white">
+											<img src="img/partners/partner-7.webp" alt="Image">
+										</div>
+										<div class="partners-main__slide swiper-slide slide slide-bg-blue-2">
+											<img src="img/partners/partner-8.webp" alt="Image">
+										</div>
+										<div class="partners-main__slide swiper-slide slide slide-bg-blue">
+											<img src="img/partners/partner-9.webp" alt="Image">
+										</div>
+										<div class="partners-main__slide swiper-slide slide slide-bg-white">
+											<img src="img/partners/partner-10.webp" alt="Image">
+										</div>
+										<div class="partners-main__slide swiper-slide slide slide-bg-blue">
+											<img src="img/partners/partner-3.webp" alt="Image">
+										</div>
+
+									</div>
+									<button type="button" class="swiper-button-prev slider-button-1">
+										<svg xmlns="http://www.w3.org/2000/svg" width="12" height="20" viewBox="0 0 12 20" fill="none">
+											<line y1="-0.5" x2="14.085" y2="-0.5" transform="matrix(-0.725276 -0.688458 -0.725276 0.688458 11 20)" stroke="#A1A1A1" />
+											<line y1="-0.5" x2="14.5089" y2="-0.5" transform="matrix(0.704086 -0.710115 -0.745737 -0.66624 0.78418 10.303)" stroke="#A1A1A1" />
+										</svg>
+									</button>
+									<button type="button" class="swiper-button-next slider-button-1">
+										<svg xmlns="http://www.w3.org/2000/svg" width="12" height="20" viewBox="0 0 12 20" fill="none">
+											<line y1="-0.5" x2="14.085" y2="-0.5" transform="matrix(0.725276 -0.688458 0.725276 0.688458 1 20)" stroke="#A1A1A1" />
+											<line y1="-0.5" x2="14.5089" y2="-0.5" transform="matrix(-0.704086 -0.710115 0.745737 -0.66624 11.2158 10.303)" stroke="#A1A1A1" />
+										</svg>
+									</button>
+								</div>
+							</div>
+							<!-- /.content-main__partners -->
+							<div class="content-main__populars-goods populars-goods section-margin-b-md">
+								<div class="populars-goods__content">
+									<div class="populars-goods__header mb-6">
+										<span class="section-caption populars-goods__header-title">
+											Популярные товары
+										</span>
+										<div class="populars-goods__search">
+											<div class="search-block">
+												<div class="search-block-group input-group">
+													<input type="text" class="search-input" placeholder="Поиск по сайту">
+													<button type="button" class="input-group-button">
+														<svg class="action-item__svg">
+															<use xlink:href="img/icons/icons.svg#search"></use>
+														</svg>
+													</button>
+												</div>
+
+											</div>
+										</div>
+									</div>
+									<div class="populars-goods__list">
+										<div class="populars-goods__product product">
+											<div class="product__body">
+												<div class="product__header">
+													<a href="#" class="product-image__link">
+														<img class="product-image__image ibg" src="img/goods/image.webp" alt="Image">
+													</a>
+
+													<div class="product__stickers">
+														<span class="product__stickers-item product__stickers-item--favorite">
+															<svg class="action-item__svg">
+																<use xlink:href="img/icons/icons.svg#favorite"></use>
+															</svg>
+														</span>
+													</div>
+												</div>
+												<div class="product__wrapper">
+													<div class="product__content">
+														<h6 class="product__title">
+															Масло моторное
+														</h6>
+														<div class="product__descr">
+															<p>
+																LUKOIL GENESIS ARMORTECH 5W-40
+															</p>
+														</div>
+														<div class="product__price price-box">
+															<div class="price">
+																868,00 ₽
+															</div>
+														</div>
+													</div>
+													<div class="product__footer">
+														<a href="#" class="button button-lg button-primary">
+															В корзину
+														</a>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="populars-goods__product product">
+											<div class="product__body">
+												<div class="product__header">
+													<a href="#" class="product-image__link">
+														<img class="product-image__image ibg" src="img/goods/image-2.webp" alt="Image">
+													</a>
+
+													<div class="product__stickers">
+														<span class="product__stickers-item product__stickers-item--favorite">
+															<svg class="action-item__svg">
+																<use xlink:href="img/icons/icons.svg#favorite"></use>
+															</svg>
+														</span>
+													</div>
+												</div>
+												<div class="product__wrapper">
+													<div class="product__content">
+														<h6 class="product__title">
+															Масло моторное
+														</h6>
+														<div class="product__descr">
+															<p>
+																LUKOIL GENESIS ARMORTECH 5W-40 LUKOIL GENESIS ARMORTECH 5W-40 LUKOIL GENESIS ARMORTECH 5W-40
+															</p>
+														</div>
+														<div class="product__price price-box">
+															<div class="price">
+																868,00 ₽
+															</div>
+														</div>
+													</div>
+													<div class="product__footer">
+														<a href="#" class="button button-lg button-primary">
+															В корзину
+														</a>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="populars-goods__product product">
+											<div class="product__body">
+												<div class="product__header">
+													<a href="#" class="product-image__link">
+														<img class="product-image__image ibg" src="img/goods/image-3.webp" alt="Image">
+													</a>
+
+													<div class="product__stickers">
+														<span class="product__stickers-item product__stickers-item--favorite">
+															<svg class="action-item__svg">
+																<use xlink:href="img/icons/icons.svg#favorite"></use>
+															</svg>
+														</span>
+													</div>
+												</div>
+												<div class="product__wrapper">
+													<div class="product__content">
+														<h6 class="product__title">
+															Масло моторное
+														</h6>
+														<div class="product__descr">
+															<p>
+																LUKOIL GENESIS ARMORTECH 5W-40 LUKOIL GENESIS ARMORTECH 5W-40 LUKOIL GENESIS ARMORTECH 5W-40
+															</p>
+														</div>
+														<div class="product__price price-box">
+															<div class="price">
+																868,00 ₽
+															</div>
+														</div>
+													</div>
+													<div class="product__footer">
+														<a href="#" class="button button-lg button-primary">
+															В корзину
+														</a>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="populars-goods__product product">
+											<div class="product__body">
+												<div class="product__header">
+													<a href="#" class="product-image__link">
+														<img class="product-image__image ibg" src="img/goods/image-4.webp" alt="Image">
+													</a>
+
+													<div class="product__stickers">
+														<span class="product__stickers-item product__stickers-item--favorite">
+															<svg class="action-item__svg">
+																<use xlink:href="img/icons/icons.svg#favorite"></use>
+															</svg>
+														</span>
+													</div>
+												</div>
+												<div class="product__wrapper">
+													<div class="product__content">
+														<h6 class="product__title">
+															Масло моторное
+														</h6>
+														<div class="product__descr">
+															<p>
+																LUKOIL GENESIS ARMORTECH 5W-40 LUKOIL GENESIS ARMORTECH 5W-40 LUKOIL GENESIS ARMORTECH 5W-40
+															</p>
+														</div>
+														<div class="product__price price-box">
+															<div class="price">
+																868,00 ₽
+															</div>
+														</div>
+													</div>
+													<div class="product__footer">
+														<a href="#" class="button button-lg button-primary">
+															В корзину
+														</a>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="populars-goods__product product">
+											<div class="product__body">
+												<div class="product__header">
+													<a href="#" class="product-image__link">
+														<img class="product-image__image ibg" src="img/goods/image.webp" alt="Image">
+													</a>
+
+													<div class="product__stickers">
+														<span class="product__stickers-item product__stickers-item--favorite">
+															<svg class="action-item__svg">
+																<use xlink:href="img/icons/icons.svg#favorite"></use>
+															</svg>
+														</span>
+													</div>
+												</div>
+												<div class="product__wrapper">
+													<div class="product__content">
+														<h6 class="product__title">
+															Масло моторное
+														</h6>
+														<div class="product__descr">
+															<p>
+																LUKOIL GENESIS ARMORTECH 5W-40
+															</p>
+														</div>
+														<div class="product__price price-box">
+															<div class="price">
+																868,00 ₽
+															</div>
+														</div>
+													</div>
+													<div class="product__footer">
+														<a href="#" class="button button-lg button-primary">
+															В корзину
+														</a>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="populars-goods__product product">
+											<div class="product__body">
+												<div class="product__header">
+													<a href="#" class="product-image__link">
+														<img class="product-image__image ibg" src="img/goods/image-2.webp" alt="Image">
+													</a>
+
+													<div class="product__stickers">
+														<span class="product__stickers-item product__stickers-item--favorite">
+															<svg class="action-item__svg">
+																<use xlink:href="img/icons/icons.svg#favorite"></use>
+															</svg>
+														</span>
+													</div>
+												</div>
+												<div class="product__wrapper">
+													<div class="product__content">
+														<h6 class="product__title">
+															Масло моторное
+														</h6>
+														<div class="product__descr">
+															<p>
+																LUKOIL GENESIS ARMORTECH 5W-40 LUKOIL GENESIS ARMORTECH 5W-40 LUKOIL GENESIS ARMORTECH 5W-40
+															</p>
+														</div>
+														<div class="product__price price-box">
+															<div class="price">
+																868,00 ₽
+															</div>
+														</div>
+													</div>
+													<div class="product__footer">
+														<a href="#" class="button button-lg button-primary">
+															В корзину
+														</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="populars-goods__button-catalog">
+										<a href="#" class="button button-xl button-primary">
+											В каталог
+										</a>
+									</div>
+								</div>
+							</div>
+							<!-- /.content-main__populars-goods populars-goods -->
+							<div class="content-main__contacts contacts-main-block section-margin-b-md">
+								<div class="contacts-main-block__content">
+									<span class="section-caption inline-block mb-6">
+										Наши контакты
+
+									</span>
+									<div class="contacts-main-block__body contacts-block">
+										<div class="contacts-block__line">
+											<span class="text-red font-extralight md:text-xl text-sm">
+												Телефон
+											</span>
+											<ul>
+												<li>
+													<a href="tel:+78722550506">
+														+7 (8722) 55-05-06
+
+													</a>
+												</li>
+												<li>
+													<a href="tel:+79887940000">
+														+7 (988)794-00-00
+													</a>
+												</li>
+											</ul>
+										</div>
+										<div class="contacts-block__line">
+											<span class="text-red font-extralight md:text-xl text-sm">
+												Электронная почта
+
+											</span>
+											<ul>
+												<li>
+													<a href="mailto:magma1962@yandex.ru">
+														magma1962@yandex.ru
+
+													</a>
+												</li>
+											</ul>
+										</div>
+										<div class="contacts-block__line">
+											<span class="text-red font-extralight md:text-xl text-sm">
+												Адрес
+
+											</span>
+											<ul>
+												<li>
+													г. Махачкала, пр. Казбекова, д. 306
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- /.content-main__contacts -->
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- /.main-page -->
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer__content">
+					<div class="footer__menu menu">
+						<div class="menu__column">
+							<span>Компания</span>
+							<ul>
+								<li>
+									<a href="#">
+										О компании
+
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Новости
+
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Партнерам
+
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Вакансии
+
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Политика конфиденциальности
+
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Персональные данные
+
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Правила продаж
+
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Правила пользования сайта
+
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Сервисные центры
+									</a>
+								</li>
+
+							</ul>
+						</div>
+						<div class="menu__column">
+							<span>Покупателям</span>
+							<ul>
+								<li>
+									<a href="#">
+										Как оформить заказ
+
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Способы оплаты
+
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Доставка
+
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Статус заказа
+
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Обмен, возврат, гарантия
+
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Сертификаты
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="menu__column">
+							<span>Юридическим лицам</span>
+							<ul>
+								<li>
+									<a href="#">
+										Проверка счета
+
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Корпоротивные отделы
+
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Подарочные карты
+
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Бонусная программа
+
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Помощь
+
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Обратная связь
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="menu__column">
+							<span>Наши контакты
+							</span>
+							<div class="menu__colunm-contacts contacts-block">
+								<div class="contacts-block__line">
+									<span class="text-red font-extralight ">
+										Телефон
+									</span>
+									<ul>
+										<li>
+											<a href="tel:+78722550506">
+												+7 (8722) 55-05-06
+
+											</a>
+										</li>
+										<li>
+											<a href="tel:+79887940000">
+												+7 (988)794-00-00
+											</a>
+										</li>
+									</ul>
+								</div>
+								<div class="contacts-block__line">
+									<span class="text-red font-extralight ">
+										Электронная почта
+
+									</span>
+									<ul>
+										<li>
+											<a href="mailto:magma1962@yandex.ru">
+												magma1962@yandex.ru
+
+											</a>
+										</li>
+									</ul>
+								</div>
+								<div class="contacts-block__line">
+									<span class="text-red font-extralight ">
+										Адрес
+
+									</span>
+									<ul>
+										<li>
+											г. Махачкала, пр. Казбекова, д. 306
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="footer__copyright md:text-center">
+						<p>
+							© Интернет-магазин автомасел и запчастей
+						</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<script src="js/app.min.js?_v=20240722180534"></script>
+</body>
+
+</html>
