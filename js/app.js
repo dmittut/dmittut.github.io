@@ -221,8 +221,8 @@
         }
     }
     function menuInit() {
-        if (document.querySelector(".icon-menu")) document.addEventListener("click", (function(e) {
-            if (bodyLockStatus && e.target.closest(".icon-menu")) {
+        if (document.querySelector(".menu__icon")) document.addEventListener("click", (function(e) {
+            if (bodyLockStatus && e.target.closest(".menu__icon")) {
                 bodyLockToggle();
                 document.documentElement.classList.toggle("menu-open");
             }
