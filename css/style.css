@@ -2118,7 +2118,8 @@ body::after {
     min-width: 14.375rem
   }
   .button.button-lg {
-    min-height: 2.75rem
+    min-height: 2.75rem;
+    height: 2.75rem
   }
   .button.button-xl {
     min-height: 6.1875rem
@@ -2391,7 +2392,8 @@ body::after {
     border-radius: .5rem
   }
   .button.button-lg {
-    min-height: 2.125rem
+    min-height: 2.125rem;
+    height: 2.125rem
   }
   .button.button-lg {
     font-size: .875rem
