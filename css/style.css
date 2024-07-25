@@ -2515,7 +2515,7 @@ body::after {
     display: none
   }
   .header-logo img {
-    max-width: 7rem;
+    max-width: 9rem;
     min-width: 8rem
   }
   .header-logo .logo {
