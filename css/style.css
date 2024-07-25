@@ -2150,8 +2150,6 @@ body::after {
     gap: 1rem
   }
   .partners-main__slider {
-    margin: -1rem;
-    padding: 1rem;
     position: relative
   }
   .partners-main__slide img {
