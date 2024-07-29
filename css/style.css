@@ -1386,6 +1386,26 @@ body::after {
   flex-direction: column;
   justify-content: flex-end
 }
+.main-page__content .content-main__banners .slide-promo-wrap__slider {
+  position: relative
+}
+.main-page__content .content-main__banners .slide-promo-wrap__slider .slider-pagination-1 {
+  position: absolute;
+  bottom: .625rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%)
+}
+.main-page__content .content-main__banners .slide-news-wrap__slider {
+  position: relative
+}
+.main-page__content .content-main__banners .slide-news-wrap__slider .slider-pagination-1 {
+  position: absolute;
+  bottom: .625rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%)
+}
 .main-page__content .content-main__banners .slide-login .slide__footer {
   position: relative;
   z-index: 2
@@ -1432,6 +1452,9 @@ body::after {
   color: #8a8d8f;
   font-weight: 600
 }
+.main-page__content .content-main__banners .slide-news.slide-info .slide__content span {
+  font-weight: 400
+}
 .main-page__content .content-main__banners .slide-news__image img {
   max-width: 100%;
   width: 100%;
@@ -1447,7 +1470,7 @@ body::after {
 }
 .main-page__content .content-main__banners .slide-info .slide__body span {
   color: #fff;
-  font-weight: 400;
+  font-weight: 700;
   line-height: 1.4
 }
 .main-page__content .content-main__banners .slide-info .slide__body .button {
@@ -1541,6 +1564,9 @@ body::after {
 }
 .partners-main {
   padding: 0 1rem
+}
+.partners-main__slider {
+  position: relative
 }
 .partners-main__slider .slider-button-1 {
   position: absolute;
@@ -1724,11 +1750,14 @@ body::after {
   .main-page__content .content-main__banners .slide__title {
     font-size: 1.5rem
   }
+  .main-page__content .content-main__banners .slide-news.slide-info .slide__content span {
+    font-size: 1.25rem
+  }
   .main-page__content .content-main__banners .slide-news__image img {
     height: 14.375rem
   }
   .main-page__content .content-main__banners .slide-info .slide__body span {
-    font-size: 1.25rem
+    font-size: 1.5rem
   }
   .catalog-page__content .content-catalog__catalog .catalog-list__brand {
     min-height: 16.25rem
@@ -2148,9 +2177,6 @@ body::after {
   }
   .populars-goods__list {
     gap: 1rem
-  }
-  .partners-main__slider {
-    position: relative
   }
   .partners-main__slide img {
     max-width: 70%
@@ -2637,11 +2663,14 @@ body::after {
   .main-page__content .content-main__banners .slide__title {
     font-size: 1rem
   }
+  .main-page__content .content-main__banners .slide-news.slide-info .slide__content span {
+    font-size: .875rem
+  }
   .main-page__content .content-main__banners .slide-news__image img {
     height: 7.5rem
   }
   .main-page__content .content-main__banners .slide-info .slide__body span {
-    font-size: .75rem
+    font-size: 1rem
   }
   .catalog-page__content .content-catalog__catalog .catalog-list__brand {
     min-height: 8.125rem
@@ -2787,6 +2816,16 @@ body::after {
       font-size: calc(1rem + .5 * (100vw - 20rem)/ 88.25)
     }
   }
+  @supports (font-size:clamp(0.875rem ,0.7900141643rem + 0.4249291785vw ,1.25rem)) {
+    .main-page__content .content-main__banners .slide-news.slide-info .slide__content span {
+      font-size: clamp(.875rem ,.7900141643rem + .4249291785vw ,1.25rem)
+    }
+  }
+  @supports not (font-size:clamp(0.875rem ,0.7900141643rem + 0.4249291785vw ,1.25rem)) {
+    .main-page__content .content-main__banners .slide-news.slide-info .slide__content span {
+      font-size: calc(.875rem + .375 * (100vw - 20rem)/ 88.25)
+    }
+  }
   @supports (height:clamp(7.5rem ,5.9419263456rem + 7.790368272vw ,14.375rem)) {
     .main-page__content .content-main__banners .slide-news__image img {
       height: clamp(7.5rem ,5.9419263456rem + 7.790368272vw ,14.375rem)
@@ -2797,14 +2836,14 @@ body::after {
       height: calc(7.5rem + 6.875 * (100vw - 20rem)/ 88.25)
     }
   }
-  @supports (font-size:clamp(0.75rem ,0.6366855524rem + 0.566572238vw ,1.25rem)) {
+  @supports (font-size:clamp(1rem ,0.8866855524rem + 0.566572238vw ,1.5rem)) {
     .main-page__content .content-main__banners .slide-info .slide__body span {
-      font-size: clamp(.75rem ,.6366855524rem + .566572238vw ,1.25rem)
+      font-size: clamp(1rem ,.8866855524rem + .566572238vw ,1.5rem)
     }
   }
-  @supports not (font-size:clamp(0.75rem ,0.6366855524rem + 0.566572238vw ,1.25rem)) {
+  @supports not (font-size:clamp(1rem ,0.8866855524rem + 0.566572238vw ,1.5rem)) {
     .main-page__content .content-main__banners .slide-info .slide__body span {
-      font-size: calc(.75rem + .5 * (100vw - 20rem)/ 88.25)
+      font-size: calc(1rem + .5 * (100vw - 20rem)/ 88.25)
     }
   }
   @supports (min-height:clamp(8.125rem ,6.2836402266rem + 9.2067988669vw ,16.25rem)) {

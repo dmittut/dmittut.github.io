@@ -5943,6 +5943,34 @@
                 },
                 on: {}
             });
+            new swiper_core_Swiper(".slide-news-wrap__slider", {
+                modules: [ Navigation, Pagination ],
+                observer: true,
+                observeParents: true,
+                slidesPerView: 1,
+                spaceBetween: 6,
+                grabCursor: true,
+                speed: 800,
+                pagination: {
+                    el: ".slide-news-wrap__slider .swiper-pagination",
+                    clickable: true
+                },
+                on: {}
+            });
+            new swiper_core_Swiper(".slide-promo-wrap__slider", {
+                modules: [ Navigation, Pagination ],
+                observer: true,
+                observeParents: true,
+                slidesPerView: 1,
+                spaceBetween: 6,
+                grabCursor: true,
+                speed: 800,
+                pagination: {
+                    el: ".slide-promo-wrap__slider .swiper-pagination",
+                    clickable: true
+                },
+                on: {}
+            });
             new swiper_core_Swiper(".banners-main__slider", {
                 modules: [ Navigation, Pagination ],
                 observer: true,
