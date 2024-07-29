@@ -1562,9 +1562,6 @@ body::after {
   gap: 1rem;
   flex-wrap: wrap
 }
-.partners-main {
-  padding: 0 1rem
-}
 .partners-main__slider {
   position: relative
 }
