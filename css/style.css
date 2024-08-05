@@ -2001,9 +2001,7 @@ body::after {
   margin-bottom: 0
 }
 .cart-inner__list .cart-good .checkbox {
-  position: absolute;
-  top: 1.5625rem;
-  left: 1.25rem
+  position: absolute
 }
 .cart-inner__list .cart-good__body {
   display: grid;
@@ -2346,6 +2344,10 @@ body::after {
   }
   .cart-inner__topnav {
     padding: 1.5625rem 1.25rem
+  }
+  .cart-inner__list .cart-good .checkbox {
+    top: 1.5625rem;
+    left: 1.25rem
   }
   .cart-inner__list .cart-good__code-product {
     font-size: .9375rem;
@@ -3687,6 +3689,10 @@ body::after {
   .cart-inner__topnav {
     padding: 1.25rem .5rem
   }
+  .cart-inner__list .cart-good .checkbox {
+    top: .625rem;
+    left: .625rem
+  }
   .cart-inner__list .cart-good__body {
     grid-template-columns: 8.25rem 1fr
   }
@@ -3734,6 +3740,9 @@ body::after {
   }
   .cart-inner .cart-conditions__row .spollers-type-one .spollers__body {
     padding: 0
+  }
+  .cart-inner .cart-conditions__row .price-box .price-old {
+    font-size: .875rem
   }
 }
 @media (max-width:20em) {
