@@ -366,7 +366,8 @@ textarea.input {
 .checkbox-lg .checkbox__text {
   color: #000;
   align-self: center;
-  transition: all .3s
+  transition: all .3s;
+  line-height: 1
 }
 .options {
   display: flex;
@@ -2172,9 +2173,7 @@ body::after {
   margin-bottom: .375rem
 }
 .cart-inner .cart-conditions__row .total-price {
-  position: absolute;
-  right: 0;
-  top: 0
+  position: absolute
 }
 .cart-inner .cart-conditions__row .price-box {
   display: flex;
@@ -2356,6 +2355,10 @@ body::after {
   }
   .cart-inner .cart-conditions__tags a {
     padding: .75rem 1.125rem
+  }
+  .cart-inner .cart-conditions__row .total-price {
+    right: 0;
+    top: 0
   }
 }
 @media (min-width:768px) {
@@ -3687,7 +3690,7 @@ body::after {
     display: none!important
   }
   .cart-inner__topnav {
-    padding: 1.25rem .5rem
+    padding: 1.25rem .625rem
   }
   .cart-inner__list .cart-good .checkbox {
     top: .625rem;
@@ -3740,6 +3743,10 @@ body::after {
   }
   .cart-inner .cart-conditions__row .spollers-type-one .spollers__body {
     padding: 0
+  }
+  .cart-inner .cart-conditions__row .total-price {
+    right: 0;
+    top: .625rem
   }
   .cart-inner .cart-conditions__row .price-box .price-old {
     font-size: .875rem
