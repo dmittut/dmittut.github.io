@@ -3834,6 +3834,9 @@ body::after {
   .catalog-page__content .content-catalog__catalog .catalog-list__list {
     grid-template-columns: 1fr
   }
+  .cart-inner__list .cart-good__body {
+    grid-template-columns: 4.25rem 1fr
+  }
 }
 @media (min-width:20em) and (max-width:108.25em) {
   @supports (font-size:clamp(0.875rem ,0.7616855524rem + 0.566572238vw ,1.375rem)) {
