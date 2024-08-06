@@ -1255,13 +1255,13 @@ body::after {
 .breadcrumbs ul li::after {
   content: "-";
   margin: 0 .5rem;
-  color: #d9d9d9
+  color: #878787
 }
 .breadcrumbs ul li:last-child::after {
   display: none
 }
 .breadcrumbs ul li a {
-  color: #d9d9d9;
+  color: #878787;
   transition: all .3s
 }
 .breadcrumbs ul li a:hover {
@@ -1377,12 +1377,9 @@ body::after {
   margin-bottom: .25rem
 }
 .header-actions__item .action-item__svg {
-  transition: all .3s;
-  width: 1.75rem;
-  height: 1.75rem
+  transition: all .3s
 }
 .header-actions__item .action-item__caption {
-  font-size: 1rem;
   text-align: center;
   transition: color .3s
 }
@@ -2160,7 +2157,6 @@ body::after {
   justify-content: space-between;
   gap: .75rem;
   color: #000;
-  font-size: 1.125rem;
   font-weight: 400;
   line-height: 1.375rem
 }
@@ -2681,6 +2677,13 @@ body::after {
     padding: 2rem 0;
     margin-bottom: 1rem
   }
+  .header-actions__item .action-item__svg {
+    width: 1.75rem;
+    height: 1.75rem
+  }
+  .header-actions__item .action-item__caption {
+    font-size: 1rem
+  }
   .main-page__wrapper {
     display: grid;
     gap: 3.25rem;
@@ -2920,6 +2923,13 @@ body::after {
   }
   .breadcrumbs {
     padding: 1rem 0
+  }
+  .header-actions__item .action-item__svg {
+    width: 1.35rem;
+    height: 1.35rem
+  }
+  .header-actions__item .action-item__caption {
+    font-size: .6875rem
   }
   .main-page__content .content-main__banners .slide__banner img {
     height: 420px
@@ -3469,6 +3479,13 @@ body::after {
   .cart-inner .cart-conditions__row {
     margin-bottom: 1rem
   }
+  .cart-inner .cart-conditions__row .price-box .price-old {
+    font-size: .875rem;
+    line-height: 1.1!important
+  }
+  .cart-inner .cart-conditions__row .price-box .price-new {
+    font-size: 1rem
+  }
   .cart-inner .cart-conditions__footer .cart-good__code-product {
     display: none
   }
@@ -3781,15 +3798,19 @@ body::after {
     width: .875rem;
     height: .5rem
   }
+  .cart-inner .cart-conditions__row .spollers-type-one .spollers__body ul li {
+    font-size: .875rem;
+    line-height: 1.1!important
+  }
   .cart-inner .cart-conditions__row .spollers-type-one .spollers__body {
     padding: 0
   }
   .cart-inner .cart-conditions__row .total-price {
     right: 0;
-    top: .625rem
+    top: .1875rem
   }
-  .cart-inner .cart-conditions__row .price-box .price-old {
-    font-size: .875rem
+  .cart-inner .cart-conditions__footer .button {
+    font-size: 1rem
   }
   .top-product-showmore__more {
     font-size: .8125rem
@@ -3817,7 +3838,7 @@ body::after {
     font-size: .625rem
   }
   .breadcrumbs ul li a {
-    font-size: .625rem
+    font-size: .875rem
   }
   .location-block__button {
     font-size: .875rem
@@ -3937,14 +3958,14 @@ body::after {
       font-size: calc(.625rem + .75 * (100vw - 20rem)/ 88.25)
     }
   }
-  @supports (font-size:clamp(0.625rem ,0.4550283286rem + 0.8498583569vw ,1.375rem)) {
+  @supports (font-size:clamp(0.875rem ,0.7616855524rem + 0.566572238vw ,1.375rem)) {
     .breadcrumbs ul li a {
-      font-size: clamp(.625rem ,.4550283286rem + .8498583569vw ,1.375rem)
+      font-size: clamp(.875rem ,.7616855524rem + .566572238vw ,1.375rem)
     }
   }
-  @supports not (font-size:clamp(0.625rem ,0.4550283286rem + 0.8498583569vw ,1.375rem)) {
+  @supports not (font-size:clamp(0.875rem ,0.7616855524rem + 0.566572238vw ,1.375rem)) {
     .breadcrumbs ul li a {
-      font-size: calc(.625rem + .75 * (100vw - 20rem)/ 88.25)
+      font-size: calc(.875rem + .5 * (100vw - 20rem)/ 88.25)
     }
   }
   @supports (font-size:clamp(0.875rem ,0.7900141643rem + 0.4249291785vw ,1.25rem)) {
