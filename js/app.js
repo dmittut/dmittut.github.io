@@ -270,12 +270,15 @@
                 if (matchMedia.matches || !matchMedia) if (hiddenHeight < getOriginalHeight(showMoreContent)) {
                     _slideUp(showMoreContent, 0, showMoreBlock.classList.contains("_showmore-active") ? getOriginalHeight(showMoreContent) : hiddenHeight);
                     showMoreButton.hidden = false;
+                    showMoreBlock.classList.remove("_showmore-no-init");
                 } else {
                     _slideDown(showMoreContent, 0, hiddenHeight);
                     showMoreButton.hidden = true;
+                    showMoreBlock.classList.add("_showmore-no-init");
                 } else {
                     _slideDown(showMoreContent, 0, hiddenHeight);
                     showMoreButton.hidden = true;
+                    showMoreBlock.classList.add("_showmore-no-init");
                 }
             }
             function getHeight(showMoreBlock, showMoreContent) {

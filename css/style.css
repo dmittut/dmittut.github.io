@@ -963,9 +963,6 @@ body::after {
 .filter-open body::after .button-filter {
   z-index: 11
 }
-:root {
-  font-size: 13px
-}
 .catalog-open .button-catalog {
   z-index: 11!important
 }
@@ -1351,12 +1348,12 @@ body::after {
 }
 .header-logo .logo::before {
   content: "";
-  left: -15%;
+  left: -18%;
   background: url(../img/header-lines/left-line.webp) 0 0 no-repeat
 }
 .header-logo .logo::after {
   content: "";
-  right: -90%;
+  right: -85%;
   background: url(../img/header-lines/left-line.webp) 0 0 no-repeat
 }
 .header-contacts__phone {
@@ -1381,11 +1378,11 @@ body::after {
 }
 .header-actions__item .action-item__svg {
   transition: all .3s;
-  width: 1.5rem;
-  height: 1.5rem
+  width: 1.75rem;
+  height: 1.75rem
 }
 .header-actions__item .action-item__caption {
-  font-size: .625rem;
+  font-size: 1rem;
   text-align: center;
   transition: color .3s
 }
@@ -1844,6 +1841,18 @@ body::after {
 .range-box .range-col input {
   outline: 0
 }
+.product-info .info-product__footer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem
+}
+.product-info .info-product__footer .button {
+  max-width: 22rem
+}
+.product-info .info-product__volume > span {
+  display: inline-block;
+  margin-bottom: .625rem
+}
 .product-info__top {
   border: 1px solid #f3f3f3;
   border-radius: 1.25rem;
@@ -1884,14 +1893,6 @@ body::after {
   display: flex;
   flex-direction: column
 }
-.product-info__top .top-product__column .info-product__footer {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem
-}
-.product-info__top .top-product__column .info-product__footer .button {
-  max-width: 22rem
-}
 .product-info__top .top-product__column .info-product__header .product__name {
   color: #000;
   font-weight: 600;
@@ -1915,10 +1916,6 @@ body::after {
 }
 .product-info__top .top-product__column .info-product__info ul li:last-child {
   margin-bottom: 0
-}
-.product-info__top .top-product__column .info-product__volume > span {
-  display: inline-block;
-  margin-bottom: .625rem
 }
 .product-info__top .top-product__column .info-product__specifications > span {
   font-weight: 600;
@@ -2154,7 +2151,8 @@ body::after {
   transition: all .3s
 }
 .cart-inner .cart-conditions__row .spollers-type-one .spollers__body {
-  margin-top: 1.5rem
+  margin-top: 1.5rem;
+  padding: 0
 }
 .cart-inner .cart-conditions__row .spollers-type-one .spollers__body ul li {
   display: flex;
@@ -2189,6 +2187,21 @@ body::after {
 .cart-inner .cart-conditions__footer .button {
   font-size: 1.25rem;
   font-weight: 700
+}
+.top-product-showmore:not(._showmore-no-init) .top-product-showmore__content {
+  position: relative
+}
+.top-product-showmore._showmore-active .top-product-showmore__content::before {
+  transition: all .3s;
+  opacity: 0;
+  pointer-events: none
+}
+.top-product-showmore__more {
+  font-size: .875rem;
+  font-weight: 700;
+  color: var(--primary);
+  line-height: 1.2;
+  margin-top: .75rem
 }
 .swiper {
   overflow: hidden
@@ -2505,6 +2518,10 @@ body::after {
   .brand-catalog__image-brand img {
     max-width: 28.75rem
   }
+  .product-info .info-product__volume > span {
+    font-size: 1.125rem;
+    line-height: 1.375rem
+  }
   .product-info__top .top-product__inner {
     gap: 2rem
   }
@@ -2523,10 +2540,6 @@ body::after {
     font-size: 1.125rem;
     line-height: 1.375rem
   }
-  .product-info__top .top-product__column .info-product__volume > span {
-    font-size: 1.125rem;
-    line-height: 1.375rem
-  }
   .product-info__top .top-product__column .info-product__specifications > span {
     font-size: 1.5rem;
     line-height: 1.8125rem
@@ -2542,12 +2555,6 @@ body::after {
   .product-info__top .top-product__column .info-product__code-product p {
     font-size: 1.375rem;
     line-height: 1.8125rem
-  }
-  .product-info__bottom .bottom-product__inner {
-    grid-template-columns: .5fr 1fr
-  }
-  .product-info__bottom .bottom-product__inner {
-    gap: 2rem
   }
   .product-info__bottom .bottom-product__row {
     margin-bottom: 2.75rem
@@ -2648,6 +2655,9 @@ body::after {
     min-height: 3.25rem;
     font-size: 1.25rem
   }
+  :root {
+    font-size: 13px
+  }
   .page-topbar__content .button-filter {
     display: none
   }
@@ -2712,9 +2722,15 @@ body::after {
   .product-info__top .top-product__left .code-product--mob {
     display: none
   }
-  .product-info__top .top-product__right {
+  .product-info__top .top-product__right .top-product-showmore__content {
     display: grid;
     grid-template-columns: repeat(2,1fr);
+    gap: 2rem
+  }
+  .product-info__bottom .bottom-product__inner {
+    grid-template-columns: .5fr 1fr
+  }
+  .product-info__bottom .bottom-product__inner {
     gap: 2rem
   }
   .popular-goods__wrapper {
@@ -2969,6 +2985,12 @@ body::after {
   .brand-catalog__header--tablet .button-filter {
     max-width: 14.375rem
   }
+  .product-info .info-product__footer--mob {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem
+  }
   .product-info__top {
     margin-bottom: 2.25rem;
     padding: 2.25rem
@@ -2992,6 +3014,12 @@ body::after {
   }
   .product-info__top .top-product__column .info-product__code-product {
     display: none
+  }
+  .product-info__bottom .bottom-product__inner {
+    grid-template-columns: 1fr
+  }
+  .product-info__bottom .bottom-product__inner {
+    gap: 1rem
   }
   .popular-goods__wrapper {
     grid-template-columns: repeat(3,1fr);
@@ -3348,6 +3376,10 @@ body::after {
   .brand-catalog__image-brand img {
     max-width: 25rem
   }
+  .product-info .info-product__volume > span {
+    font-size: .875rem;
+    line-height: 1.125rem
+  }
   .product-info__top {
     padding: 1.5rem
   }
@@ -3360,10 +3392,6 @@ body::after {
   .product-info__top .top-product__column .info-product__info ul li {
     font-size: 1rem;
     line-height: 1.1875rem
-  }
-  .product-info__top .top-product__column .info-product__volume > span {
-    font-size: .875rem;
-    line-height: 1.125rem
   }
   .product-info__top .top-product__column .info-product__specifications > span {
     font-size: 1rem;
@@ -3380,12 +3408,6 @@ body::after {
   .product-info__top .top-product__column .info-product__code-product p {
     font-size: .9375rem;
     line-height: 1.1875rem
-  }
-  .product-info__bottom .bottom-product__inner {
-    grid-template-columns: 1fr
-  }
-  .product-info__bottom .bottom-product__inner {
-    gap: 1rem
   }
   .product-info__bottom .bottom-product__row {
     margin-bottom: 2.25rem
@@ -3452,6 +3474,17 @@ body::after {
   }
   .cart-inner .cart-conditions__footer .button {
     min-height: 3rem
+  }
+  .top-product-showmore:not(._showmore-no-init) .top-product-showmore__content::before {
+    content: "";
+    display: block;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(180deg,transparent 0,#fff 100%);
+    transition: all .3s;
+    height: 3.75rem
   }
 }
 @media (max-width:600px) {
@@ -3622,6 +3655,10 @@ body::after {
   .brand-catalog .catalog-page__content .content-catalog__catalog .catalog-list__list {
     grid-template-columns: 1fr!important
   }
+  .product-info .info-product__volume > span {
+    font-size: .75rem;
+    line-height: 1rem
+  }
   .product-info__top {
     margin-bottom: 1.5rem
   }
@@ -3650,10 +3687,6 @@ body::after {
     font-size: .75rem;
     line-height: .875rem
   }
-  .product-info__top .top-product__column .info-product__volume > span {
-    font-size: .75rem;
-    line-height: 1rem
-  }
   .product-info__top .top-product__column .info-product__specifications > span {
     font-size: .875rem
   }
@@ -3675,12 +3708,12 @@ body::after {
     line-height: 1.1875rem
   }
   .product-info__bottom .bottom-product__row p {
-    font-size: .625rem;
-    line-height: .75rem
+    font-size: .75rem;
+    line-height: 1.1
   }
   .product-info__bottom .bottom-product__row ul li {
-    font-size: .625rem;
-    line-height: .75rem
+    font-size: .75rem;
+    line-height: 1.1
   }
   .popular-goods__header {
     margin-bottom: 1.5rem
@@ -3757,6 +3790,14 @@ body::after {
   }
   .cart-inner .cart-conditions__row .price-box .price-old {
     font-size: .875rem
+  }
+  .top-product-showmore__more {
+    font-size: .8125rem
+  }
+}
+@media (max-width:25em) {
+  .product-info__top .top-product__inner {
+    grid-template-columns: 1fr
   }
 }
 @media (max-width:20em) {
