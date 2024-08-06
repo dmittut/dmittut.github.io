@@ -963,6 +963,9 @@ body::after {
 .filter-open body::after .button-filter {
   z-index: 11
 }
+:root {
+  font-size: 13px
+}
 .catalog-open .button-catalog {
   z-index: 11!important
 }
@@ -2730,6 +2733,10 @@ body::after {
   }
   .cart-inner__list .cart-good__actions {
     gap: 1.5rem
+  }
+  .cart-inner__list .cart-good__action svg {
+    width: 1.875rem;
+    height: 1.875rem
   }
   .cart-inner .cart-conditions__footer .button {
     min-height: 4.625rem
