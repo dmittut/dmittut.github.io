@@ -3684,13 +3684,16 @@ body::after {
     height: 1rem
   }
   .product-info__top .top-product__inner {
-    grid-template-columns: .8fr 1fr
+    grid-template-columns: 1fr!important
   }
   .product-info__top .top-product__left .code-product--mob span {
     font-size: .75rem
   }
   .product-info__top .top-product__left .code-product--mob p {
     font-size: .625rem
+  }
+  .product-info__top .top-product__image img {
+    max-height: 20rem
   }
   .product-info__top .top-product__column .info-product__header .product__name {
     font-size: .875rem;
@@ -3814,11 +3817,6 @@ body::after {
   }
   .top-product-showmore__more {
     font-size: .8125rem
-  }
-}
-@media (max-width:25em) {
-  .product-info__top .top-product__inner {
-    grid-template-columns: 1fr
   }
 }
 @media (max-width:20em) {
