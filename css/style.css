@@ -4187,8 +4187,6 @@ body::after {
     background-color: rgba(0,0,0,.5)
   }
   .product:hover {
-    -webkit-transform: translateY(-5px);
-    transform: translateY(-5px);
     box-shadow: -3px 3px 8px 0 rgba(255,0,0,.05),-11px 10px 15px 0 rgba(255,0,0,.04),-26px 23px 21px 0 rgba(255,0,0,.03),-46px 41px 76px 0 rgba(255,0,0,.01),-71px 64px 27px 0 rgba(255,14,14,0)
   }
   .header-actions__item:hover .action-item__svg {
