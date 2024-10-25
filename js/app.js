@@ -6260,6 +6260,16 @@
             }));
         }));
     };
+    const dropdownElement = document.querySelector(".menu-dropdown");
+    function toggleDropdown(event) {
+        event.stopPropagation();
+        dropdownElement.classList.toggle("active");
+    }
+    function closeDropdownIfClickedOutside(event) {
+        if (!dropdownElement.contains(event.target)) dropdownElement.classList.remove("active");
+    }
+    dropdownElement.addEventListener("click", toggleDropdown);
+    document.addEventListener("click", closeDropdownIfClickedOutside);
     toggleCatalogMenu();
     toggleCatalogFilter();
     resetFilters();
