@@ -2318,6 +2318,19 @@ body::after {
 .order__conditions {
   margin-left: auto
 }
+.order__conditions .total-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: .75rem;
+  flex-wrap: wrap
+}
+.order__conditions .total-row b {
+  font-size: 16px
+}
+.order__conditions .total-row .price-box {
+  font-size: 16px!important
+}
 .order-policy {
   margin-top: 1.25rem
 }
@@ -2441,6 +2454,146 @@ body::after {
 }
 .order__form .form__line .line__input:last-child {
   margin-bottom: 0
+}
+.order-thanks__header {
+  text-align: center
+}
+.order-thanks__header h2 {
+  color: #000;
+  font-weight: 700;
+  margin-bottom: .5rem
+}
+.order-thanks__row {
+  border: 1px solid #f3f3f3;
+  border-radius: 1.25rem;
+  box-shadow: -3px 3px 8px 0 rgba(0,0,0,.05),-11px 10px 15px 0 rgba(0,0,0,.04),-26px 23px 21px 0 rgba(0,0,0,.03),-46px 41px 25px 0 rgba(0,0,0,.01),-71px 64px 27px 0 transparent;
+  background: #fff
+}
+.order-thanks__row .row-order__header span {
+  color: #8a8d8f;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 29px;
+  letter-spacing: 0;
+  text-align: left
+}
+.order-thanks__row .row-order__card {
+  border-bottom: 1px solid #838786
+}
+.order-thanks__row .row-order__card .card__body {
+  display: flex;
+  align-items: center
+}
+.order-thanks__row .row-order__card .card__image img {
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover
+}
+.order-thanks__row .row-order__card .card__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+  width: 100%;
+  flex: 1
+}
+.order-thanks__row .row-order__card .card__desc h5 {
+  color: #000;
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: 0;
+  text-align: left;
+  margin-bottom: 6px
+}
+.order-thanks__row .row-order__card .card__desc p {
+  color: #000;
+  font-weight: 300;
+  line-height: 27px;
+  letter-spacing: 0;
+  text-align: left
+}
+.order-thanks__row .row-order__card .card__more {
+  text-align: right
+}
+.order-thanks__row .row-order__card .card__price {
+  margin-bottom: 8px
+}
+.order-thanks__row .row-order__card .card__count {
+  font-size: 16px;
+  line-height: 1
+}
+.order-thanks__row .row-order__footer ul li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .625rem;
+  color: #8a8d8f;
+  font-weight: 600;
+  line-height: 29px;
+  letter-spacing: 0;
+  text-align: left
+}
+.order-thanks__row .row-order__footer .order-footer-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .625rem;
+  color: #000;
+  font-weight: 600;
+  line-height: 39px
+}
+.order-thanks__footer {
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+.order-thanks__footer .button {
+  max-width: 33.75rem;
+  font-size: 20px
+}
+.order-thanks__info {
+  border: 1px solid #f3f3f3;
+  border-radius: 1.25rem;
+  box-shadow: -3px 3px 8px 0 rgba(0,0,0,.05),-11px 10px 15px 0 rgba(0,0,0,.04),-26px 23px 21px 0 rgba(0,0,0,.03),-46px 41px 25px 0 rgba(0,0,0,.01),-71px 64px 27px 0 transparent;
+  background: #fff
+}
+.order-thanks__info .info-row__header h2 {
+  color: #000;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 39px
+}
+.order-thanks__info .info-row__content {
+  border-top: 1px solid #838786;
+  border-bottom: 1px solid #838786
+}
+.order-thanks__info .info-row__content ul {
+  display: flex;
+  flex-direction: column;
+  gap: 16px
+}
+.order-thanks__info .info-row__content ul li {
+  display: grid;
+  gap: 16px
+}
+.order-thanks__info .info-row__content ul li p {
+  color: #000;
+  font-weight: 600
+}
+.order-thanks__info .info-row__content ul li span {
+  color: #000;
+  font-weight: 400
+}
+.order-thanks__info .info-row__footer {
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+.order-thanks__info .info-row__footer a {
+  color: #cf102d;
+  font-weight: 400;
+  line-height: 19px
 }
 .swiper {
   overflow: hidden
@@ -2641,6 +2794,9 @@ body::after {
   }
   .order__form .form__line .line__payments .options {
     gap: 1rem
+  }
+  .order-thanks__info .info-row__content ul li {
+    grid-template-columns: minmax(100px,255px) 1fr
   }
 }
 @media (min-width:768px) {
@@ -2883,6 +3039,9 @@ body::after {
   .order .order__header {
     margin-bottom: 3.75rem
   }
+  .order__conditions .cart-conditions__row {
+    margin-bottom: 1rem
+  }
   .order__form .form__line {
     padding-bottom: 48px
   }
@@ -2912,6 +3071,73 @@ body::after {
   }
   .order__form .form__line .line__input {
     margin-bottom: .6875rem
+  }
+  .order-thanks {
+    padding: 2.5rem 0
+  }
+  .order-thanks__header h2 {
+    font-size: 2.25rem;
+    line-height: 2.4375rem
+  }
+  .order-thanks__header {
+    margin-bottom: 3.75rem
+  }
+  .order-thanks__row {
+    padding: 48px 40px
+  }
+  .order-thanks__row .row-order__header {
+    margin-bottom: 48px
+  }
+  .order-thanks__row .row-order__content {
+    margin-bottom: 50px
+  }
+  .order-thanks__row .row-order__card {
+    padding-bottom: 14px;
+    margin-bottom: 30px
+  }
+  .order-thanks__row .row-order__card .card__body {
+    gap: 22px
+  }
+  .order-thanks__row .row-order__card .card__image img {
+    max-width: 75px;
+    min-width: 75px
+  }
+  .order-thanks__row .row-order__card .card__desc h5 {
+    font-size: 32px
+  }
+  .order-thanks__row .row-order__card .card__desc p {
+    font-size: 22px
+  }
+  .order-thanks__row .row-order__footer ul li {
+    font-size: 24px;
+    margin-bottom: 12px
+  }
+  .order-thanks__footer {
+    margin-top: 85px
+  }
+  .order-thanks__info {
+    padding: 48px 40px;
+    margin-top: 24px
+  }
+  .order-thanks__info .info-row__header {
+    margin-bottom: 36px
+  }
+  .order-thanks__info .info-row__content {
+    padding: 35px 0 40px 0
+  }
+  .order-thanks__info .info-row__content ul li p {
+    font-size: 24px;
+    line-height: 29px
+  }
+  .order-thanks__info .info-row__content ul li span {
+    font-size: 24px;
+    line-height: 29px
+  }
+  .order-thanks__info .info-row__footer {
+    padding-top: 33px
+  }
+  .order-thanks__info .info-row__footer a {
+    font-size: 24px
   }
 }
 @media (min-width:768px) and (min-width:108.25em) {
@@ -2974,7 +3200,7 @@ body::after {
   .header .menu__body ul li ul {
     box-shadow: rgba(149,157,165,.2) 0 8px 24px;
     position: absolute;
-    top: calc(100% + 10px);
+    top: 99%;
     left: 0;
     opacity: 0
   }
@@ -3116,6 +3342,12 @@ body::after {
   }
   .order__form .form__line .line__header h4 {
     font-size: 1.5rem
+  }
+  .order-thanks__row .row-order__footer .order-footer-row {
+    font-size: 32px
+  }
+  .order-thanks__info .info-row__header h2 {
+    font-size: 32px
   }
 }
 @media (min-width:1024.98px) and (min-width:108.25em) {
@@ -3444,6 +3676,17 @@ body::after {
   .order__form .form__line .line__payments .options__logo img {
     max-width: 6rem;
     width: 60%
+  }
+  .order-thanks__row .row-order__footer .order-footer-row {
+    font-size: 26px
+  }
+  .order-thanks__info .info-row__header h2 {
+    font-size: 26px
+  }
+}
+@media (any-hover:hover) and (max-width:1024.98px) {
+  .header .menu__body .menu-dropdown:hover ul {
+    display: flex!important
   }
 }
 @media (max-width:992px) {
@@ -3945,6 +4188,70 @@ body::after {
   .order__form .form__line .line__input {
     margin-bottom: .375rem
   }
+  .order-thanks {
+    padding: 1.25rem 0
+  }
+  .order-thanks__header h2 {
+    font-size: 2rem;
+    line-height: 1.8125rem
+  }
+  .order-thanks__header {
+    margin-bottom: 1.25rem
+  }
+  .order-thanks__row .row-order__header span {
+    display: none
+  }
+  .order-thanks__row .row-order__card {
+    padding: 12px 0
+  }
+  .order-thanks__row .row-order__card .card__image img {
+    max-width: 75px;
+    min-width: 75px
+  }
+  .order-thanks__row .row-order__card .card__price .price-box {
+    font-size: 15px
+  }
+  .order-thanks__row .row-order__footer {
+    padding-top: 20px
+  }
+  .order-thanks__row .row-order__footer ul li {
+    font-size: 12px;
+    line-height: 22px;
+    margin-bottom: 8px
+  }
+  .order-thanks__row .row-order__footer .order-footer-row {
+    line-height: 22px;
+    font-size: 14px!important
+  }
+  .order-thanks__footer {
+    margin-top: 44px
+  }
+  .order-thanks__info {
+    margin-top: 16px
+  }
+  .order-thanks__info .info-row__header {
+    margin-bottom: 22px
+  }
+  .order-thanks__info .info-row__header h2 {
+    font-size: 18px!important
+  }
+  .order-thanks__info .info-row__content {
+    padding: 24px 0
+  }
+  .order-thanks__info .info-row__content ul li p {
+    font-size: 18px;
+    line-height: 1
+  }
+  .order-thanks__info .info-row__content ul li span {
+    font-size: 18px;
+    line-height: 1.3
+  }
+  .order-thanks__info .info-row__footer {
+    padding-top: 16px
+  }
+  .order-thanks__info .info-row__footer a {
+    font-size: 16px
+  }
 }
 @media (max-width:600px) {
   .main-page__content .content-main__banners .slide__banner img {
@@ -4305,6 +4612,44 @@ body::after {
   .order__form .form__line .line__content {
     width: 100%
   }
+  .order-thanks__header h2 {
+    font-size: 1.125rem;
+    line-height: 1.1875rem
+  }
+  .order-thanks__row {
+    padding: 14px 10px
+  }
+  .order-thanks__row .row-order__card .card__body {
+    font-size: 10px
+  }
+  .order-thanks__row .row-order__card .card__image img {
+    min-width: 2.5rem;
+    max-width: 2.5rem
+  }
+  .order-thanks__row .row-order__card .card__desc h5 {
+    font-size: 14px
+  }
+  .order-thanks__row .row-order__card .card__desc p {
+    font-size: 10px
+  }
+  .order-thanks__footer {
+    margin-top: 30px
+  }
+  .order-thanks__info {
+    padding: 14px 10px
+  }
+  .order-thanks__info .info-row__header {
+    margin-bottom: 16px
+  }
+  .order-thanks__info .info-row__content ul li {
+    grid-template-columns: minmax(50px,144px) 1fr
+  }
+  .order-thanks__info .info-row__content ul li p {
+    font-size: 14px
+  }
+  .order-thanks__info .info-row__content ul li span {
+    font-size: 12px
+  }
 }
 @media (max-width:20em) {
   .quantity__input input {
@@ -4638,6 +4983,21 @@ body::after {
   .order__form .form__line .line__content {
     min-width: 450px
   }
+  .order-thanks__row {
+    padding: 14px 20px
+  }
+  .order-thanks__row .row-order__card .card__body {
+    font-size: 15px
+  }
+  .order-thanks__row .row-order__card .card__desc h5 {
+    font-size: 18px
+  }
+  .order-thanks__row .row-order__card .card__desc p {
+    font-size: 15px
+  }
+  .order-thanks__info {
+    padding: 14px 20px
+  }
 }
 @media (min-width:768px) and (min-width:20em) and (max-width:108.25em) {
   @supports (margin-bottom:clamp(3.75rem ,2.9001416431rem + 4.2492917847vw ,7.5rem)) {
@@ -4696,6 +5056,18 @@ body::after {
   .quantity__button:hover::after,
   .quantity__button:hover::before {
     background-color: rgba(0,0,0,.5)
+  }
+  .header .menu__body .menu-dropdown:hover ul {
+    opacity: 1;
+    pointer-events: auto
+  }
+  .header .menu__body .menu-dropdown:hover a > a {
+    color: var(--primary)
+  }
+  .header .menu__body .menu-dropdown:hover a > a::after {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+    background-color: var(--primary)
   }
   .product:hover {
     box-shadow: -3px 3px 8px 0 rgba(255,0,0,.05),-11px 10px 15px 0 rgba(255,0,0,.04),-26px 23px 21px 0 rgba(255,0,0,.03),-46px 41px 76px 0 rgba(255,0,0,.01),-71px 64px 27px 0 rgba(255,14,14,0)
