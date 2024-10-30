@@ -14,11 +14,11 @@
 			opacity: 1;
 		}
 	</style>
-	<link rel="stylesheet" href="css/style.min.css?_v=20241029171419">
+	<link rel="stylesheet" href="css/style.min.css?_v=20241030173105">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<script src="https://cdn.tailwindcss.com?_v=20241029171419"></script>
+	<script src="https://cdn.tailwindcss.com?_v=20241030173105"></script>
 	<script>
 		tailwind.config = {
 			theme: {
@@ -866,13 +866,76 @@
 									<div class="line__step active">
 										<span>4</span>
 									</div>
-									<div class="line__content">
-										<div class="order__conditions">
-											<div class="cart-conditions">
-												<div class="cart-conditions__header">
-													<h6>Условия заказа</h6>
+									<div class="line__content flex-1">
+
+
+										<div class="order__conditions" data-showmore>
+											<div class="cart-conditions ">
+												<div class="cart-conditions__header flex items-center gap-3 justify-between" data-showmore-button>
+													<h6 class="mb-0">Условия заказа</h6>
+													<i>
+														<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+															<path d="M12 17.414 3.293 8.707l1.414-1.414L12 14.586l7.293-7.293 1.414 1.414L12 17.414z" />
+														</svg>
+													</i>
 												</div>
-												<div class="cart-conditions__body">
+												<div class="cart-conditions__body" data-showmore-content="0">
+													<div class="row-order">
+														<div class="row-order__card card">
+															<div class="card__body">
+																<a href="#" class="card__image">
+																	<img src="img/goods/image-2.webp" alt="Image">
+																</a>
+																<div class="card__content">
+																	<div class="card__desc">
+																		<h5>Масло моторное </h5>
+																		<p>LUKOIL GENESIS UNIVERSAL 10W-40</p>
+																	</div>
+																	<div class="card__more">
+
+																		<div class="card__price">
+																			<div class="price-box price-box--md">
+
+																				<div class="price">
+																					1736,00&nbsp;₽
+																				</div>
+																			</div>
+																		</div>
+																		<div class="card__count">
+																			<span>1 шт.</span>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="row-order__card card">
+															<div class="card__body">
+																<a href="#" class="card__image">
+																	<img src="img/goods/image-2.webp" alt="Image">
+																</a>
+																<div class="card__content">
+																	<div class="card__desc">
+																		<h5>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum, velit! </h5>
+																		<p>LUKOIL GENESIS UNIVERSAL 10W-40</p>
+																	</div>
+																	<div class="card__more">
+
+																		<div class="card__price">
+																			<div class="price-box price-box--md">
+
+																				<div class="price">
+																					1736,00&nbsp;₽
+																				</div>
+																			</div>
+																		</div>
+																		<div class="card__count">
+																			<span>1 шт.</span>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
 													<div class="cart-conditions__row">
 														<div class="total-row">
 															<b>Итого:</b>
@@ -887,20 +950,21 @@
 
 														</div>
 													</div>
-													<div class="cart-conditions__footer">
-														<a href="#" class="button button-primary button-xl w-full">
-															Оформить заказ
-														</a>
-														<div class="order-policy">
-															<div class="checkbox">
-																<input id="c_1" class="checkbox__input" checked type="checkbox" value="1" name="form[]">
-																<label for="c_1" class="checkbox__label"><span class="checkbox__text">Нажимая на кнопку, вы соглашаетесь с договором публичной оферты и политикой обработки персональных данных</span></label>
-															</div>
+
+												</div>
+												<div class="cart-conditions__footer">
+													<a href="#" class="button button-primary button-xl w-full">
+														Оформить заказ
+													</a>
+													<div class="order-policy">
+														<div class="checkbox">
+															<input id="c_1" class="checkbox__input" checked type="checkbox" value="1" name="form[]">
+															<label for="c_1" class="checkbox__label"><span class="checkbox__text">Нажимая на кнопку, вы соглашаетесь с договором публичной оферты и политикой обработки персональных данных</span></label>
 														</div>
-														<!-- <div class="cart-conditions__delivery">
-                                <p>Доставим на дом 14 июля (вт)</p>
-                              </div> -->
 													</div>
+													<!-- <div class="cart-conditions__delivery">
+                              <p>Доставим на дом 14 июля (вт)</p>
+                            </div> -->
 												</div>
 											</div>
 											<!-- /.cart-conditions -->
@@ -1119,7 +1183,7 @@
 			</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20241029171419"></script>
+	<script src="js/app.min.js?_v=20241030173105"></script>
 </body>
 
 </html>

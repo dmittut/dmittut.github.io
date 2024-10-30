@@ -2316,7 +2316,56 @@ body::after {
   margin-bottom: .5rem
 }
 .order__conditions {
-  margin-left: auto
+  max-width: 60.5rem
+}
+.order__conditions._showmore-active .cart-conditions__header i {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg)
+}
+.order__conditions .row-order__card {
+  border-bottom: 1px solid #838786
+}
+.order__conditions .row-order__card .card__body {
+  display: flex;
+  align-items: center
+}
+.order__conditions .row-order__card .card__image img {
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover
+}
+.order__conditions .row-order__card .card__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
+  flex: 1
+}
+.order__conditions .row-order__card .card__desc h5 {
+  color: #000;
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: 0;
+  text-align: left;
+  margin-bottom: 6px
+}
+.order__conditions .row-order__card .card__desc p {
+  color: #000;
+  font-weight: 300;
+  line-height: 27px;
+  letter-spacing: 0;
+  text-align: left
+}
+.order__conditions .row-order__card .card__more {
+  text-align: right
+}
+.order__conditions .row-order__card .card__price {
+  margin-bottom: 8px
+}
+.order__conditions .row-order__card .card__count {
+  font-size: 16px;
+  line-height: 1
 }
 .order__conditions .total-row {
   display: flex;
@@ -2330,6 +2379,15 @@ body::after {
 }
 .order__conditions .total-row .price-box {
   font-size: 16px!important
+}
+.order__conditions .cart-conditions__header {
+  margin-bottom: 16px
+}
+.order__conditions .cart-conditions__header h6 {
+  margin-bottom: 0
+}
+.order__conditions .cart-conditions__header i {
+  transition: all .3s
 }
 .order-policy {
   margin-top: 1.25rem
@@ -3039,6 +3097,23 @@ body::after {
   .order .order__header {
     margin-bottom: 3.75rem
   }
+  .order__conditions .row-order__card {
+    padding-bottom: 14px;
+    margin-bottom: 14px
+  }
+  .order__conditions .row-order__card .card__body {
+    gap: 10px
+  }
+  .order__conditions .row-order__card .card__image img {
+    max-width: 75px;
+    min-width: 75px
+  }
+  .order__conditions .row-order__card .card__desc h5 {
+    font-size: 24px
+  }
+  .order__conditions .row-order__card .card__desc p {
+    font-size: 18px
+  }
   .order__conditions .cart-conditions__row {
     margin-bottom: 1rem
   }
@@ -3392,11 +3467,6 @@ body::after {
   }
   .header-contacts__schedule {
     font-size: .625rem
-  }
-}
-@media (max-width:75em) {
-  .order__conditions {
-    display: none!important
   }
 }
 @media (max-width:1100px) {
@@ -4147,6 +4217,25 @@ body::after {
   .order .order__header {
     margin-bottom: 1.25rem
   }
+  .order__conditions .row-order {
+    margin-bottom: 16px
+  }
+  .order__conditions .row-order__card {
+    padding: 12px 0
+  }
+  .order__conditions .row-order__card .card__image img {
+    max-width: 75px;
+    min-width: 75px
+  }
+  .order__conditions .row-order__card .card__desc h5 {
+    line-height: 1.1
+  }
+  .order__conditions .row-order__card .card__desc p {
+    line-height: 1.1
+  }
+  .order__conditions .row-order__card .card__price .price-box {
+    font-size: 15px
+  }
   .order__form .form__line {
     padding-bottom: 36px
   }
@@ -4587,6 +4676,25 @@ body::after {
     font-size: 1.125rem;
     line-height: 1.1875rem
   }
+  .order__conditions .row-order__card .card__body {
+    font-size: 10px
+  }
+  .order__conditions .row-order__card .card__image img {
+    min-width: 2.5rem;
+    max-width: 2.5rem
+  }
+  .order__conditions .row-order__card .card__desc h5 {
+    font-size: 14px
+  }
+  .order__conditions .row-order__card .card__desc p {
+    font-size: 10px
+  }
+  .order__conditions .row-order__card .card__price .price-box {
+    font-size: 12px
+  }
+  .order__conditions .row-order__card .card__count {
+    font-size: 12px
+  }
   .order-policy .checkbox__label {
     font-size: .625rem
   }
@@ -4979,6 +5087,15 @@ body::after {
   .product-info__top .top-product__column .info-product__header .product__subname {
     font-size: .75rem;
     line-height: 1.125rem
+  }
+  .order__conditions .row-order__card .card__body {
+    font-size: 15px
+  }
+  .order__conditions .row-order__card .card__desc h5 {
+    font-size: 18px
+  }
+  .order__conditions .row-order__card .card__desc p {
+    font-size: 15px
   }
   .order__form .form__line .line__content {
     min-width: 450px
