@@ -3115,8 +3115,11 @@ body::after {
   .order__conditions .row-order__card .card__desc p {
     font-size: 18px
   }
-  .order__conditions .cart-conditions__row {
+  .order__conditions .cart-conditions__body {
     margin-bottom: 1rem
+  }
+  .order__conditions .cart-conditions__row {
+    margin-bottom: 0!important
   }
   .order__form .form__line {
     padding-bottom: 48px
@@ -4236,6 +4239,12 @@ body::after {
   }
   .order__conditions .row-order__card .card__price .price-box {
     font-size: 15px
+  }
+  .order__conditions .cart-conditions__body {
+    margin-bottom: 1rem
+  }
+  .order__conditions .cart-conditions__row {
+    margin-bottom: 0!important
   }
   .order__form .form__line {
     padding-bottom: 36px
