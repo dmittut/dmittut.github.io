@@ -802,10 +802,10 @@ textarea.input {
   opacity: 1;
   pointer-events: auto
 }
-.header .menu__body .menu-dropdown.active a > a {
+.header .menu__body .menu-dropdown.active > a {
   color: var(--primary)
 }
-.header .menu__body .menu-dropdown.active a > a::after {
+.header .menu__body .menu-dropdown.active > a::after {
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
   background-color: var(--primary)
@@ -2160,9 +2160,6 @@ body::after {
 }
 .cart-inner__list .cart-good__code-product span {
   font-weight: 400
-}
-.cart-inner__list .cart-good__action--favorite:hover svg path {
-  fill: var(--primary)
 }
 .cart-inner__list .cart-good__action--delete:hover svg path {
   stroke: var(--primary)
@@ -5188,10 +5185,10 @@ body::after {
     opacity: 1;
     pointer-events: auto
   }
-  .header .menu__body .menu-dropdown:hover a > a {
+  .header .menu__body .menu-dropdown:hover > a {
     color: var(--primary)
   }
-  .header .menu__body .menu-dropdown:hover a > a::after {
+  .header .menu__body .menu-dropdown:hover > a::after {
     -webkit-transform: rotate(180deg);
     transform: rotate(180deg);
     background-color: var(--primary)
