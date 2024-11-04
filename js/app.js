@@ -6221,7 +6221,10 @@
                 on: {}
             });
             new swiper_core_Swiper(".slide-news-wrap__slider", {
-                modules: [ Navigation, Pagination ],
+                modules: [ Navigation, Pagination, Autoplay ],
+                autoplay: {
+                    delay: 3e3
+                },
                 observer: true,
                 observeParents: true,
                 slidesPerView: 1,
@@ -6235,7 +6238,10 @@
                 on: {}
             });
             new swiper_core_Swiper(".slide-promo-wrap__slider", {
-                modules: [ Navigation, Pagination ],
+                modules: [ Navigation, Pagination, Autoplay ],
+                autoplay: {
+                    delay: 3e3
+                },
                 observer: true,
                 observeParents: true,
                 slidesPerView: 1,
