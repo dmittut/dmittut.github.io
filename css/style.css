@@ -132,6 +132,42 @@ h6 {
   margin: 0 auto;
   padding: 0 1.75rem
 }
+.form__column {
+  position: relative;
+  align-self: self-end;
+  height: 100%
+}
+.form__label {
+  color: #000;
+  display: inline-block;
+  margin-bottom: 14px;
+  font-weight: 600
+}
+.form ._form-error {
+  border-color: #cf102d
+}
+.form ._form-error .form__viewpass {
+  top: 35%
+}
+.form__error {
+  color: #cf102d;
+  margin-top: 12px
+}
+.form__viewpass {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%)
+}
+.form__viewpass:not(._viewpass-active) {
+  background-image: url("data:image/svg+xml, %3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2716px%27 height=%2716px%27 viewBox=%270 0 24 24%27 fill=%27none%27%3E%3Cpath d=%27M2.99902 3L20.999 21M9.8433 9.91364C9.32066 10.4536 8.99902 11.1892 8.99902 12C8.99902 13.6569 10.3422 15 11.999 15C12.8215 15 13.5667 14.669 14.1086 14.133M6.49902 6.64715C4.59972 7.90034 3.15305 9.78394 2.45703 12C3.73128 16.0571 7.52159 19 11.9992 19C13.9881 19 15.8414 18.4194 17.3988 17.4184M10.999 5.04939C11.328 5.01673 11.6617 5 11.9992 5C16.4769 5 20.2672 7.94291 21.5414 12C21.2607 12.894 20.8577 13.7338 20.3522 14.5%27 stroke=%27%23000000%27 stroke-width=%272%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27/%3E%3C/svg%3E")
+}
+.form__viewpass._viewpass-active {
+  background-image: url("data:image/svg+xml, %3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2716px%27 height=%2716px%27 viewBox=%270 0 24 24%27 fill=%27none%27%3E%3Cpath d=%27M15.0007 12C15.0007 13.6569 13.6576 15 12.0007 15C10.3439 15 9.00073 13.6569 9.00073 12C9.00073 10.3431 10.3439 9 12.0007 9C13.6576 9 15.0007 10.3431 15.0007 12Z%27 stroke=%27%23000000%27 stroke-width=%272%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27/%3E%3Cpath d=%27M12.0012 5C7.52354 5 3.73326 7.94288 2.45898 12C3.73324 16.0571 7.52354 19 12.0012 19C16.4788 19 20.2691 16.0571 21.5434 12C20.2691 7.94291 16.4788 5 12.0012 5Z%27 stroke=%27%23000000%27 stroke-width=%272%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27/%3E%3C/svg%3E")
+}
 input[type=email],
 input[type=tel],
 input[type=text],
@@ -261,6 +297,42 @@ textarea {
 textarea.input {
   resize: none;
   padding: 0 0
+}
+.input-custom {
+  display: inline-flex;
+  min-height: 50px;
+  border-radius: .75rem;
+  border: 1px solid #8a8d8f;
+  outline: 0;
+  padding: .625rem 1.5rem;
+  transition-property: color,background-color,border-color,text-decoration-color,fill,stroke;
+  transition-timing-function: cubic-bezier(.4,0,.2,1);
+  transition-duration: 150ms
+}
+.input-custom::-webkit-input-placeholder {
+  color: #000
+}
+.input-custom:-ms-input-placeholder {
+  color: #000
+}
+.input-custom::-ms-input-placeholder {
+  color: #000
+}
+.input-custom::placeholder {
+  color: #000
+}
+.select_opt-form .select__option:first-child {
+  display: none
+}
+.select_opt-form .select__title {
+  border-color: #8a8d8f;
+  min-height: 50px
+}
+.select_opt-form .select__options {
+  border-color: #8a8d8f
+}
+.select_opt-form .select__value {
+  padding: .625rem 1.5rem
 }
 .checkbox {
   position: relative
@@ -1144,12 +1216,29 @@ body::after {
   gap: 1rem;
   flex-wrap: wrap
 }
+[hidden]:where(:not([hidden=until-found])) {
+  display: none!important
+}
+.loaded .swiper {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .3s linear 5s
+}
+.loaded .swiper.swiper-initialized {
+  opacity: 1;
+  pointer-events: auto
+}
 .button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   gap: .5rem
+}
+.button[disabled=true] {
+  background-color: #a1a1a1!important;
+  color: #fff!important;
+  pointer-events: none
 }
 .button.button-lg {
   padding: .625rem
@@ -1411,6 +1500,21 @@ body::after {
   border-color: #cf102d;
   background-color: #cf102d
 }
+.link-red {
+  font-size: 1rem;
+  transition: all .3s;
+  color: #cf102d;
+  border-bottom: 1px solid transparent;
+  font-weight: 700;
+  padding-bottom: 2px;
+  margin-bottom: -2px
+}
+.link-red:hover {
+  border-bottom-color: #cf102d
+}
+.button-authorization {
+  padding: .625rem 1.875rem!important
+}
 .header__center [class*=__container] {
   padding: 0 .9375rem;
   max-width: 100rem
@@ -1448,12 +1552,12 @@ body::after {
 .header-logo .logo::before {
   content: "";
   left: -18%;
-  background: url(../img/header-lines/left-line.webp) 0 0 no-repeat
+  background: url(../img/header-lines/left-line.png) 0 0 no-repeat
 }
 .header-logo .logo::after {
   content: "";
   right: -85%;
-  background: url(../img/header-lines/left-line.webp) 0 0 no-repeat
+  background: url(../img/header-lines/left-line.png) 0 0 no-repeat
 }
 .header-contacts__phone {
   font-weight: 500
@@ -1667,7 +1771,7 @@ body::after {
   position: absolute;
   bottom: -1.25rem;
   left: -1rem;
-  background: url(../img/banners/line.webp) 0 0 no-repeat
+  background: url(../img/banners/line.png) 0 0 no-repeat
 }
 .main-page__content .content-main__banners .slide-login .slide__body {
   position: relative
@@ -1680,7 +1784,7 @@ body::after {
   position: absolute;
   right: 0;
   bottom: 0;
-  background: url(../img/banners/login.webp) 0 0 no-repeat
+  background: url(../img/banners/login.png) 0 0 no-repeat
 }
 .main-page__content .content-main__banners .slide-banner {
   transition: all .3s
@@ -2639,6 +2743,27 @@ body::after {
   font-weight: 400;
   line-height: 19px
 }
+.thanks-form-content {
+  background-color: #dbf8de;
+  border-radius: .75rem
+}
+.thanks-form-content-button {
+  padding: 14px 24px;
+  color: #fff;
+  background-color: #4fad50;
+  transition: all .3s;
+  font-size: 1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: .75rem
+}
+.thanks-form-content-button:hover {
+  background-color: #479b48
+}
+.thanks-form-content-button:active {
+  background-color: #3f8a40
+}
 .swiper {
   overflow: hidden
 }
@@ -2748,8 +2873,17 @@ body::after {
   }
 }
 @media (min-width:480px) {
+  .form__error {
+    font-size: 1rem
+  }
   .search-input {
     padding: .625rem 3.25rem .625rem .625rem
+  }
+  .input-custom {
+    font-size: 1.125rem
+  }
+  .select_opt-form .select__option {
+    font-size: 1.125rem
   }
   .checkbox-lg .checkbox__text {
     font-size: 1.125rem
@@ -2842,8 +2976,14 @@ body::after {
   .order-thanks__info .info-row__content ul li {
     grid-template-columns: minmax(100px,255px) 1fr
   }
+  .registration-content__main .main-register__footer {
+    max-width: 60rem
+  }
 }
 @media (min-width:768px) {
+  .form__label {
+    font-size: 16px
+  }
   .custom-input {
     line-height: 1.1;
     min-height: 80px;
@@ -2885,6 +3025,9 @@ body::after {
   }
   .product__price {
     font-size: 1.375rem
+  }
+  .page-register {
+    padding: 2.5rem 0
   }
   .button.button-lg {
     border-radius: .75rem
@@ -3202,6 +3345,12 @@ body::after {
   }
   .order-thanks__info .info-row__footer a {
     font-size: 24px
+  }
+  .registration-content .registration-btn {
+    padding: .625rem 1.875rem
+  }
+  .thanks-form-content {
+    padding: 1.5rem
   }
 }
 @media (min-width:768px) and (min-width:108.25em) {
@@ -3892,6 +4041,9 @@ body::after {
   }
 }
 @media (max-width:768px) {
+  .form__label {
+    font-size: 14px
+  }
   .custom-input {
     font-size: .75rem;
     min-height: 46px;
@@ -3962,6 +4114,9 @@ body::after {
   }
   .page-topbar {
     margin-bottom: 1rem
+  }
+  .page-register {
+    padding: 1.5rem 0
   }
   .button.button-lg {
     border-radius: .5rem
@@ -4336,6 +4491,9 @@ body::after {
   .order-thanks__info .info-row__footer a {
     font-size: 16px
   }
+  .thanks-form-content {
+    padding: 1rem
+  }
 }
 @media (max-width:600px) {
   .main-page__content .content-main__banners .slide__banner img {
@@ -4346,8 +4504,17 @@ body::after {
   }
 }
 @media (max-width:480px) {
+  .form__error {
+    font-size: .875rem
+  }
   .search-input {
     padding: .5rem 2rem .5rem .625rem
+  }
+  .input-custom {
+    font-size: .875rem
+  }
+  .select_opt-form .select__option {
+    font-size: .875rem
   }
   .checkbox-lg .checkbox__text {
     font-size: .8125rem
@@ -4464,7 +4631,7 @@ body::after {
     right: 1rem;
     width: 45%;
     height: 75%;
-    background: url(../img/banners/login-mob.webp) right/contain no-repeat
+    background: url(../img/banners/login-mob.png) right/contain no-repeat
   }
   .main-page__content .content-main__banners .banners-main__slider .slide-login {
     display: none
