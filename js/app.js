@@ -816,6 +816,7 @@
                         targetElement.parentElement.classList.add("_form-focus");
                     }
                     formValidate.removeError(targetElement);
+                    if (targetElement.classList.contains("input-phone") && targetElement.value === "") targetElement.value = "+7";
                 }
             }));
             document.body.addEventListener("focusout", (function(e) {
@@ -829,6 +830,7 @@
                         const relatedCheckbox = targetElement.closest(".checkbox-remove-required")?.querySelector('input[type="checkbox"]');
                         if (relatedCheckbox && relatedCheckbox.checked) formValidate.removeError(targetElement); else formValidate.validateInput(targetElement);
                     }
+                    if (targetElement.classList.contains("input-phone") && targetElement.value === "+7") targetElement.value = "";
                 }
             }));
             if (options.viewPass) document.addEventListener("click", (function(e) {
@@ -848,7 +850,7 @@
                         setHeight(textarea, Math.min(startHeight, maxHeight));
                         textarea.addEventListener("input", (() => {
                             if (textarea.scrollHeight > startHeight) {
-                                textarea.style.height = `auto`;
+                                textarea.style.height = "auto";
                                 setHeight(textarea, Math.min(Math.max(textarea.scrollHeight, startHeight), maxHeight));
                             }
                         }));
@@ -860,6 +862,13 @@
             }
             document.body.addEventListener("input", (function(e) {
                 const targetElement = e.target;
+                if (targetElement.classList.contains("input-phone")) {
+                    let value = targetElement.value.replace(/\D/g, "");
+                    if (!value.startsWith("7")) value = "7" + value;
+                    value = "+" + value;
+                    if (value.length > 12) value = value.slice(0, 12);
+                    targetElement.value = value;
+                }
                 if (targetElement.classList.contains("only-num")) targetElement.value = targetElement.value.replace(/[^0-9]/g, "");
             }));
             document.addEventListener("DOMContentLoaded", (function() {
@@ -942,9 +951,15 @@
             },
             validateInput(formRequiredItem) {
                 let error = 0;
-                if (formRequiredItem.dataset.required === "email") {
+                if (formRequiredItem.dataset.required === "email" || formRequiredItem.classList.contains("input-mail")) {
                     formRequiredItem.value = formRequiredItem.value.replace(" ", "");
                     if (this.emailTest(formRequiredItem)) {
+                        this.addError(formRequiredItem);
+                        error++;
+                    } else this.removeError(formRequiredItem);
+                } else if (formRequiredItem.classList.contains("input-phone")) {
+                    formRequiredItem.value = formRequiredItem.value.replace(/\s/g, "");
+                    if (this.phoneTest(formRequiredItem)) {
                         this.addError(formRequiredItem);
                         error++;
                     } else this.removeError(formRequiredItem);
@@ -956,6 +971,12 @@
                     error++;
                 } else this.removeError(formRequiredItem);
                 return error;
+            },
+            phoneTest(formRequiredItem) {
+                return !/^\+7\d{10}$/.test(formRequiredItem.value);
+            },
+            emailTest(formRequiredItem) {
+                return !/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,8}$/.test(formRequiredItem.value);
             },
             addError(formRequiredItem) {
                 formRequiredItem.classList.add("_form-error");
@@ -984,17 +1005,7 @@
                         const checkbox = checkboxes[index];
                         checkbox.checked = false;
                     }
-                    if (modules_flsModules.select) {
-                        let selects = form.querySelectorAll("div.select");
-                        if (selects.length) for (let index = 0; index < selects.length; index++) {
-                            const select = selects[index].querySelector("select");
-                            modules_flsModules.select.selectBuild(select);
-                        }
-                    }
                 }), 0);
-            },
-            emailTest(formRequiredItem) {
-                return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(formRequiredItem.value);
             }
         };
         function formSubmit() {

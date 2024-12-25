@@ -14,11 +14,11 @@
 			opacity: 1;
 		}
 	</style>
-	<link rel="stylesheet" href="css/style.min.css?_v=20241223134800">
+	<link rel="stylesheet" href="css/style.min.css?_v=20241225150542">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<script src="https://cdn.tailwindcss.com?_v=20241223134800"></script>
+	<script src="https://cdn.tailwindcss.com?_v=20241225150542"></script>
 	<script>
 		tailwind.config = {
 			theme: {
@@ -81,8 +81,8 @@
 									<a href="#" class="logo">
 
 										<picture>
-											<source media="(max-width:480px)" srcset="img/logo-mob.png">
-											<img src="img/logo.png" alt="Logo">
+											<source media="(max-width:480px)" srcset="img/logo-mob.webp">
+											<img src="img/logo.webp" alt="Logo">
 										</picture>
 									</a>
 									<div class="header-logo__text xl:text-2xl lg:text-lg text-white uppercase lg:pl-14 pl-10 font-medium">
@@ -351,9 +351,7 @@
 									</h2>
 
 								</div>
-								<p class="font-bold md:text-2xl text-sm md:mb-8 mb-5">
-									Какой вы клиент?
-								</p>
+
 							</div>
 							<form action="#" class="form" method="POST">
 								<div class="fop-register__step step flex flex-col gap-4" hidden>
@@ -373,7 +371,7 @@
 											<input autocomplete="off" data-required type="tel" name="form[]" data-error="*Это поле обязательно для заполнения" placeholder="Номер телефона*" class="input-custom input-phone">
 										</div>
 										<div class="form__column">
-											<input autocomplete="off" data-required type="text" name="form[]" data-error="*Это поле обязательно для заполнения" placeholder="E-mail*" class="input-custom">
+											<input autocomplete="off" data-required type="text" name="form[]" data-error="*Это поле обязательно для заполнения" placeholder="E-mail*" class="input-custom input-mail">
 										</div>
 									</div>
 									<div class="grid md:grid-cols-3 gap-4">
@@ -381,18 +379,22 @@
 											<input autocomplete="off" data-required type="text" name="form[]" data-error="*Это поле обязательно для заполнения" placeholder="Логин (минимум 3 символа)*" class="input-custom">
 										</div>
 										<div class="form__column">
-											<input autocomplete="off" data-required type="password" name="form[]" data-error="*Это поле обязательно для заполнения" placeholder="Придумайте пароль*" class="input-custom">
-											<button type="button" class="form__viewpass">
+											<div class="relative">
+												<input autocomplete="off" data-required type="password" name="form[]" data-error="*Это поле обязательно для заполнения" placeholder="Придумайте пароль*" class="input-custom">
+												<button type="button" class="form__viewpass">
 
 
-											</button>
+												</button>
+											</div>
 										</div>
 										<div class="form__column">
-											<input autocomplete="off" data-required type="password" name="form[]" data-error="*Это поле обязательно для заполнения" placeholder="Повторите пароль*" class="input-custom">
-											<button type="button" class="form__viewpass">
+											<div class="relative">
+												<input autocomplete="off" data-required type="password" name="form[]" data-error="*Это поле обязательно для заполнения" placeholder="Повторите пароль*" class="input-custom">
+												<button type="button" class="form__viewpass">
 
 
-											</button>
+												</button>
+											</div>
 										</div>
 									</div>
 								</div>
@@ -417,9 +419,7 @@
 									</h2>
 
 								</div>
-								<p class="font-bold md:text-2xl text-sm md:mb-8 mb-5">
-									Какой вы клиент?
-								</p>
+
 							</div>
 							<form action="#" class="form" method="POST">
 								<div class="opt-register__step step flex flex-col gap-4" hidden>
@@ -439,7 +439,7 @@
 											<input autocomplete="off" data-required type="tel" name="form[]" data-error="*Это поле обязательно для заполнения" placeholder="Номер телефона*" class="input-custom input-phone">
 										</div>
 										<div class="form__column">
-											<input autocomplete="off" data-required type="text" name="form[]" data-error="*Это поле обязательно для заполнения" placeholder="E-mail*" class="input-custom">
+											<input autocomplete="off" data-required type="text" name="form[]" data-error="*Это поле обязательно для заполнения" placeholder="E-mail*" class="input-custom input-mail">
 										</div>
 									</div>
 									<div class="grid md:grid-cols-3 gap-4">
@@ -447,18 +447,22 @@
 											<input autocomplete="off" data-required type="text" name="form[]" data-error="*Это поле обязательно для заполнения" placeholder="Логин (минимум 3 символа)*" class="input-custom">
 										</div>
 										<div class="form__column">
-											<input autocomplete="off" data-required type="password" name="form[]" data-error="*Это поле обязательно для заполнения" placeholder="Придумайте пароль*" class="input-custom">
-											<button type="button" class="form__viewpass">
+											<div class="relative">
+												<input autocomplete="off" data-required type="password" name="form[]" data-error="*Это поле обязательно для заполнения" placeholder="Придумайте пароль*" class="input-custom">
+												<button type="button" class="form__viewpass">
 
 
-											</button>
+												</button>
+											</div>
 										</div>
 										<div class="form__column">
-											<input autocomplete="off" data-required type="password" name="form[]" data-error="*Это поле обязательно для заполнения" placeholder="Повторите пароль*" class="input-custom">
-											<button type="button" class="form__viewpass">
+											<div class="relative">
+												<input autocomplete="off" data-required type="password" name="form[]" data-error="*Это поле обязательно для заполнения" placeholder="Повторите пароль*" class="input-custom">
+												<button type="button" class="form__viewpass">
 
 
-											</button>
+												</button>
+											</div>
 										</div>
 									</div>
 									<div class="opt-register__footer mt-10 flex items-start">
@@ -485,7 +489,7 @@
 													<label for="c_1" class="checkbox__label"><span class="checkbox__text">Указать позже</span></label>
 												</div>
 											</div>
-											<input autocomplete="off" data-validate data-required type="text" name="card" id="card" data-error="*Это поле обязательно для заполнения" placeholder="Введите ИНН или ОГРН" class="input-custom only-num">
+											<input autocomplete="off" data-validate data-required type="text" name="card" id="card" data-error="*Это поле обязательно для заполнения" placeholder="БИК банка" class="input-custom">
 										</div>
 										<div class="form__column checkbox-remove-required">
 											<div class="flex items-center gap-2 flex-wrap mb-4 justify-between">
@@ -495,7 +499,7 @@
 													<label for="c_2" class="checkbox__label"><span class="checkbox__text">Указать позже</span></label>
 												</div>
 											</div>
-											<input autocomplete="off" data-validate data-required type="text" name="address" id="address" data-error="*Это поле обязательно для заполнения" placeholder="Введите ИНН или ОГРН" class="input-custom only-num">
+											<input autocomplete="off" data-validate data-required type="text" name="address" id="address" data-error="*Это поле обязательно для заполнения" placeholder="Введите адрес" class="input-custom">
 										</div>
 									</div>
 									<div class="grid md:grid-cols-3 gap-4">
@@ -739,7 +743,7 @@
 			</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20241223134800"></script>
+	<script src="js/app.min.js?_v=20241225150542"></script>
 </body>
 
 </html>
