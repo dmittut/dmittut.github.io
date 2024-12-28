@@ -808,69 +808,6 @@
             viewPass: true,
             autoHeight: false
         }) {
-            document.body.addEventListener("focusin", (function(e) {
-                const targetElement = e.target;
-                if (targetElement.tagName === "INPUT" || targetElement.tagName === "TEXTAREA") {
-                    if (!targetElement.hasAttribute("data-no-focus-classes")) {
-                        targetElement.classList.add("_form-focus");
-                        targetElement.parentElement.classList.add("_form-focus");
-                    }
-                    formValidate.removeError(targetElement);
-                    if (targetElement.classList.contains("input-phone") && targetElement.value === "") targetElement.value = "+7";
-                }
-            }));
-            document.body.addEventListener("focusout", (function(e) {
-                const targetElement = e.target;
-                if (targetElement.tagName === "INPUT" || targetElement.tagName === "TEXTAREA") {
-                    if (!targetElement.hasAttribute("data-no-focus-classes")) {
-                        targetElement.classList.remove("_form-focus");
-                        targetElement.parentElement.classList.remove("_form-focus");
-                    }
-                    if (targetElement.hasAttribute("data-validate")) {
-                        const relatedCheckbox = targetElement.closest(".checkbox-remove-required")?.querySelector('input[type="checkbox"]');
-                        if (relatedCheckbox && relatedCheckbox.checked) formValidate.removeError(targetElement); else formValidate.validateInput(targetElement);
-                    }
-                    if (targetElement.classList.contains("input-phone") && targetElement.value === "+7") targetElement.value = "";
-                }
-            }));
-            if (options.viewPass) document.addEventListener("click", (function(e) {
-                let targetElement = e.target;
-                if (targetElement.closest('[class*="__viewpass"]')) {
-                    let inputType = targetElement.classList.contains("_viewpass-active") ? "password" : "text";
-                    targetElement.parentElement.querySelector("input").setAttribute("type", inputType);
-                    targetElement.classList.toggle("_viewpass-active");
-                }
-            }));
-            if (options.autoHeight) {
-                const textareas = document.querySelectorAll("textarea[data-autoheight]");
-                if (textareas.length) {
-                    textareas.forEach((textarea => {
-                        const startHeight = textarea.hasAttribute("data-autoheight-min") ? Number(textarea.dataset.autoheightMin) : Number(textarea.offsetHeight);
-                        const maxHeight = textarea.hasAttribute("data-autoheight-max") ? Number(textarea.dataset.autoheightMax) : 1 / 0;
-                        setHeight(textarea, Math.min(startHeight, maxHeight));
-                        textarea.addEventListener("input", (() => {
-                            if (textarea.scrollHeight > startHeight) {
-                                textarea.style.height = "auto";
-                                setHeight(textarea, Math.min(Math.max(textarea.scrollHeight, startHeight), maxHeight));
-                            }
-                        }));
-                    }));
-                    function setHeight(textarea, height) {
-                        textarea.style.height = `${height}px`;
-                    }
-                }
-            }
-            document.body.addEventListener("input", (function(e) {
-                const targetElement = e.target;
-                if (targetElement.classList.contains("input-phone")) {
-                    let value = targetElement.value.replace(/\D/g, "");
-                    if (!value.startsWith("7")) value = "7" + value;
-                    value = "+" + value;
-                    if (value.length > 12) value = value.slice(0, 12);
-                    targetElement.value = value;
-                }
-                if (targetElement.classList.contains("only-num")) targetElement.value = targetElement.value.replace(/[^0-9]/g, "");
-            }));
             document.addEventListener("DOMContentLoaded", (function() {
                 document.querySelectorAll(".button-opt, .button-fop").forEach((button => {
                     button.addEventListener("click", (() => {
@@ -915,97 +852,158 @@
                         if (hasErrors === 0) {
                             currentStep.setAttribute("hidden", "true");
                             nextStep.removeAttribute("hidden");
-                        } else console.warn("Не все поля на текущем шаге заполнены корректно.");
+                        } else console.warn("Исправьте ошибки перед переходом.");
                     }));
                 }));
                 document.querySelectorAll("[data-form-prev-step]").forEach((button => {
                     button.addEventListener("click", (() => {
-                        const prevStepSelector = button.getAttribute("data-form-prev-step");
-                        const prevStep = document.querySelector(prevStepSelector);
-                        const currentStepSelector = ".opt-register__step.step-2";
-                        const currentStep = document.querySelector(currentStepSelector);
-                        if (prevStep) prevStep.removeAttribute("hidden");
-                        if (currentStep) currentStep.setAttribute("hidden", "true");
+                        const prevStep = document.querySelector(".opt-register__step.step");
+                        const currentStep = document.querySelector(".opt-register__step.step-2");
+                        currentStep.hidden = true;
+                        prevStep.hidden = false;
                     }));
                 }));
-            }));
-            document.body.addEventListener("change", (function(e) {
-                const targetElement = e.target;
-                if (targetElement.closest(".checkbox-remove-required") && targetElement.type === "checkbox") {
-                    const relatedInputs = targetElement.closest(".checkbox-remove-required").querySelectorAll("input, textarea");
-                    relatedInputs.forEach((input => {
-                        if (targetElement.checked) formValidate.removeError(input);
-                    }));
-                }
+                document.body.addEventListener("focusin", (function(e) {
+                    const targetElement = e.target;
+                    if (targetElement.tagName === "INPUT" || targetElement.tagName === "TEXTAREA") {
+                        if (!targetElement.hasAttribute("data-no-focus-classes")) {
+                            targetElement.classList.add("_form-focus");
+                            targetElement.parentElement.classList.add("_form-focus");
+                        }
+                        formValidate.removeError(targetElement);
+                        if (targetElement.classList.contains("input-phone") && targetElement.value === "") targetElement.value = "+7";
+                    }
+                }));
+                document.body.addEventListener("focusout", (function(e) {
+                    const targetElement = e.target;
+                    if (targetElement.tagName === "INPUT" || targetElement.tagName === "TEXTAREA") {
+                        if (!targetElement.hasAttribute("data-no-focus-classes")) {
+                            targetElement.classList.remove("_form-focus");
+                            targetElement.parentElement.classList.remove("_form-focus");
+                        }
+                        if (targetElement.hasAttribute("data-validate")) {
+                            const relatedCheckbox = targetElement.closest(".checkbox-remove-required")?.querySelector('input[type="checkbox"]');
+                            if (relatedCheckbox && relatedCheckbox.checked) formValidate.removeError(targetElement); else formValidate.validateInput(targetElement);
+                        }
+                        if (targetElement.classList.contains("input-phone") && targetElement.value === "+7") targetElement.value = "";
+                    }
+                }));
+                document.body.addEventListener("click", (function(e) {
+                    const targetElement = e.target;
+                    if (targetElement.classList.contains("form__viewpass")) {
+                        const parent = targetElement.closest(".relative");
+                        const input = parent.querySelector('input[type="password"], input[type="text"]');
+                        if (input) {
+                            const isPassword = input.type === "password";
+                            input.setAttribute("type", isPassword ? "text" : "password");
+                            targetElement.classList.toggle("_viewpass-active");
+                        }
+                    }
+                }));
+                document.body.addEventListener("input", (function(e) {
+                    const targetElement = e.target;
+                    if (targetElement.classList.contains("input-phone")) {
+                        let inputValue = targetElement.value.replace(/\D/g, "");
+                        if (!inputValue.startsWith("7")) inputValue = "7" + inputValue;
+                        if (inputValue.length > 1 && inputValue.length <= 4) inputValue = inputValue.replace(/^(\d)(\d{0,3})/, "+$1 ($2"); else if (inputValue.length > 4 && inputValue.length <= 7) inputValue = inputValue.replace(/^(\d)(\d{3})(\d+)/, "+$1 ($2) $3"); else if (inputValue.length > 7 && inputValue.length <= 9) inputValue = inputValue.replace(/^(\d)(\d{3})(\d{3})(\d+)/, "+$1 ($2) $3-$4"); else if (inputValue.length > 9) inputValue = inputValue.replace(/^(\d)(\d{3})(\d{3})(\d{2})(\d+)/, "+$1 ($2) $3-$4-$5");
+                        targetElement.value = inputValue.slice(0, 18);
+                    }
+                    if (targetElement.classList.contains("input-letters")) targetElement.value = targetElement.value.replace(/[^a-zA-Zа-яА-ЯёЁїЇєЄіІ]/g, "");
+                    if (targetElement.classList.contains("only-num")) targetElement.value = targetElement.value.replace(/[^0-9]/g, "");
+                    if (targetElement.classList.contains("min-3")) if (targetElement.value.length < 3) targetElement.setCustomValidity("Минимум 3 символа"); else targetElement.setCustomValidity("");
+                    if (targetElement.classList.contains("input-password") || targetElement.classList.contains("input-password-confirm")) {
+                        const passwordField = document.querySelector(".input-password");
+                        const confirmPasswordField = document.querySelector(".input-password-confirm");
+                        if (passwordField && confirmPasswordField) if (passwordField.value !== confirmPasswordField.value) confirmPasswordField.setCustomValidity("Пароли не совпадают"); else confirmPasswordField.setCustomValidity("");
+                    }
+                    if (targetElement.classList.contains("input-password-2") || targetElement.classList.contains("input-password-confirm-2")) {
+                        const passwordField = document.querySelector(".input-password-2");
+                        const confirmPasswordField = document.querySelector(".input-password-confirm-2");
+                        if (passwordField && confirmPasswordField) if (passwordField.value !== confirmPasswordField.value) confirmPasswordField.setCustomValidity("Пароли не совпадают"); else confirmPasswordField.setCustomValidity("");
+                    }
+                }));
+                document.body.addEventListener("change", (function(e) {
+                    const targetElement = e.target;
+                    if (targetElement.type === "checkbox" && targetElement.closest(".checkbox-remove-required")) {
+                        const container = targetElement.closest(".checkbox-remove-required");
+                        const relatedInput = container.querySelector("input[data-validate]");
+                        if (relatedInput) if (targetElement.checked) {
+                            formValidate.removeError(relatedInput);
+                            relatedInput.removeAttribute("data-required");
+                            relatedInput.removeAttribute("required");
+                            relatedInput.classList.remove("_form-error");
+                        } else {
+                            relatedInput.setAttribute("data-required", "true");
+                            relatedInput.setAttribute("required", "true");
+                        }
+                    }
+                }));
+                document.body.addEventListener("submit", (function(e) {
+                    const form = e.target;
+                    const hasErrors = formValidate.getErrors(form);
+                    if (hasErrors > 0) {
+                        e.preventDefault();
+                        console.warn("Исправьте ошибки перед отправкой формы.");
+                    }
+                }));
             }));
         }
         let formValidate = {
+            errorMessages: {
+                email: "Введите корректный email",
+                phone: "Введите корректный номер телефона",
+                letters: "Разрешены только буквы",
+                minLength: "Минимум 3 символа",
+                required: "Поле обязательно для заполнения",
+                checkbox: "Необходимо поставить галочку",
+                passwordLength: "Пароль должен содержать минимум 8 символов",
+                passwordMismatch: "Пароли не совпадают"
+            },
             getErrors(form) {
                 let error = 0;
                 let formRequiredItems = form.querySelectorAll("*[data-required]");
                 if (formRequiredItems.length) formRequiredItems.forEach((formRequiredItem => {
-                    const relatedCheckbox = formRequiredItem.closest(".checkbox-remove-required")?.querySelector('input[type="checkbox"]');
-                    if ((formRequiredItem.offsetParent !== null || formRequiredItem.tagName === "SELECT") && !formRequiredItem.disabled && (!relatedCheckbox || !relatedCheckbox.checked)) error += this.validateInput(formRequiredItem);
+                    error += this.validateInput(formRequiredItem);
                 }));
                 return error;
             },
-            validateInput(formRequiredItem) {
+            validateInput(input) {
                 let error = 0;
-                if (formRequiredItem.dataset.required === "email" || formRequiredItem.classList.contains("input-mail")) {
-                    formRequiredItem.value = formRequiredItem.value.replace(" ", "");
-                    if (this.emailTest(formRequiredItem)) {
-                        this.addError(formRequiredItem);
-                        error++;
-                    } else this.removeError(formRequiredItem);
-                } else if (formRequiredItem.classList.contains("input-phone")) {
-                    formRequiredItem.value = formRequiredItem.value.replace(/\s/g, "");
-                    if (this.phoneTest(formRequiredItem)) {
-                        this.addError(formRequiredItem);
-                        error++;
-                    } else this.removeError(formRequiredItem);
-                } else if (formRequiredItem.type === "checkbox" && !formRequiredItem.checked) {
-                    this.addError(formRequiredItem);
+                if (input.dataset.required === "email" && this.emailTest(input)) {
+                    this.addError(input, this.errorMessages.email);
                     error++;
-                } else if (!formRequiredItem.value.trim()) {
-                    this.addError(formRequiredItem);
+                } else if (input.classList.contains("input-phone") && this.phoneTest(input)) {
+                    this.addError(input, this.errorMessages.phone);
                     error++;
-                } else this.removeError(formRequiredItem);
+                } else if (input.classList.contains("input-letters") && /[^a-zA-Zа-яА-ЯёЁїЇєЄіІ]/.test(input.value)) {
+                    this.addError(input, this.errorMessages.letters);
+                    error++;
+                } else if (input.classList.contains("min-3") && input.value.length < 3) {
+                    this.addError(input, this.errorMessages.minLength);
+                    error++;
+                } else if (!input.value.trim()) {
+                    this.addError(input, this.errorMessages.required);
+                    error++;
+                } else this.removeError(input);
                 return error;
             },
-            phoneTest(formRequiredItem) {
-                return !/^\+7\d{10}$/.test(formRequiredItem.value);
+            emailTest(input) {
+                return !/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(input.value);
             },
-            emailTest(formRequiredItem) {
-                return !/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,8}$/.test(formRequiredItem.value);
+            phoneTest(input) {
+                return !/^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$/.test(input.value);
             },
-            addError(formRequiredItem) {
-                formRequiredItem.classList.add("_form-error");
-                formRequiredItem.parentElement.classList.add("_form-error");
-                let inputError = formRequiredItem.parentElement.querySelector(".form__error");
-                if (inputError) formRequiredItem.parentElement.removeChild(inputError);
-                if (formRequiredItem.dataset.error) formRequiredItem.parentElement.insertAdjacentHTML("beforeend", `<div class="form__error">${formRequiredItem.dataset.error}</div>`);
+            addError(input, message) {
+                input.classList.add("_form-error");
+                input.parentElement.classList.add("_form-error");
+                let errorElement = input.parentElement.querySelector(".form__error");
+                if (!errorElement) input.parentElement.insertAdjacentHTML("beforeend", `<div class="form__error">${message}</div>`);
             },
-            removeError(formRequiredItem) {
-                formRequiredItem.classList.remove("_form-error");
-                formRequiredItem.parentElement.classList.remove("_form-error");
-                if (formRequiredItem.parentElement.querySelector(".form__error")) formRequiredItem.parentElement.removeChild(formRequiredItem.parentElement.querySelector(".form__error"));
-            },
-            formClean(form) {
-                form.reset();
-                setTimeout((() => {
-                    let inputs = form.querySelectorAll("input,textarea");
-                    for (let index = 0; index < inputs.length; index++) {
-                        const el = inputs[index];
-                        el.parentElement.classList.remove("_form-focus");
-                        el.classList.remove("_form-focus");
-                        formValidate.removeError(el);
-                    }
-                    let checkboxes = form.querySelectorAll(".checkbox__input");
-                    if (checkboxes.length > 0) for (let index = 0; index < checkboxes.length; index++) {
-                        const checkbox = checkboxes[index];
-                        checkbox.checked = false;
-                    }
-                }), 0);
+            removeError(input) {
+                input.classList.remove("_form-error");
+                input.parentElement.classList.remove("_form-error");
+                const errorElement = input.parentElement.querySelector(".form__error");
+                if (errorElement) errorElement.remove();
             }
         };
         function formSubmit() {
@@ -6766,6 +6764,7 @@
                     slidesPerView: 1,
                     spaceBetween: 6,
                     grabCursor: true,
+                    loop: true,
                     autoplay: {
                         delay: 3e3
                     },
@@ -6774,13 +6773,18 @@
                         el: ".slide-certificates__slider .swiper-pagination",
                         clickable: true
                     },
-                    on: {}
+                    on: {
+                        init: function() {
+                            console.log("swiper initialized");
+                        }
+                    }
                 });
                 new Swiper(".slide-news-wrap__slider", {
                     modules: [ Navigation, Pagination, Autoplay ],
                     autoplay: {
                         delay: 3e3
                     },
+                    loop: true,
                     observer: true,
                     observeParents: true,
                     slidesPerView: 1,
@@ -6791,13 +6795,18 @@
                         el: ".slide-news-wrap__slider .swiper-pagination",
                         clickable: true
                     },
-                    on: {}
+                    on: {
+                        init: function() {
+                            console.log("swiper initialized");
+                        }
+                    }
                 });
                 new Swiper(".slide-promo-wrap__slider", {
                     modules: [ Navigation, Pagination, Autoplay ],
                     autoplay: {
                         delay: 3e3
                     },
+                    loop: true,
                     observer: true,
                     observeParents: true,
                     slidesPerView: 1,
@@ -6808,7 +6817,11 @@
                         el: ".slide-promo-wrap__slider .swiper-pagination",
                         clickable: true
                     },
-                    on: {}
+                    on: {
+                        init: function() {
+                            console.log("swiper initialized");
+                        }
+                    }
                 });
                 new Swiper(".banners-main__slider", {
                     modules: [ Navigation, Pagination ],
