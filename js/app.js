@@ -7127,8 +7127,6 @@
                 radioButtons.forEach((radio => {
                     const value = radio.value;
                     if (radio.checked) contentContainers[value].classList.remove("hidden"); else contentContainers[value].classList.add("hidden");
-                    console.log(value);
-                    console.log(contentContainers);
                 }));
             }
             radioButtons.forEach((radio => {

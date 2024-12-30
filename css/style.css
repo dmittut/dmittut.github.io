@@ -2363,6 +2363,10 @@ body::after {
   font-weight: 400;
   line-height: 1.375rem
 }
+.cart-conditions__row .spollers-type-one .spollers__title::after {
+  content: "";
+  display: none
+}
 .cart-conditions__row .total-row {
   width: 100%
 }
@@ -2371,9 +2375,6 @@ body::after {
   color: #838786;
   display: inline-block;
   margin-bottom: .375rem
-}
-.cart-conditions__row .total-price {
-  position: absolute
 }
 .cart-conditions__row .price-box {
   display: flex;
@@ -2960,10 +2961,6 @@ body::after {
   }
   .cart-conditions__tags a {
     padding: .75rem 1.125rem
-  }
-  .cart-conditions__row .total-price {
-    right: 0;
-    top: 0
   }
   .order__form .form__line {
     gap: 2.125rem
@@ -4826,10 +4823,6 @@ body::after {
   }
   .cart-conditions__row .spollers-type-one .spollers__body {
     padding: 0
-  }
-  .cart-conditions__row .total-price {
-    right: 0;
-    top: .1875rem
   }
   .cart-conditions__footer .button {
     font-size: 1rem
