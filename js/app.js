@@ -6964,8 +6964,12 @@
         }
         const da = new DynamicAdapt("max");
         da.init();
-        if (navigator.userAgent.includes("Macintosh")) document.body.classList.add("macos");
-        if (navigator.platform.toUpperCase().includes("MAC")) document.body.classList.add("macos");
+        document.addEventListener("DOMContentLoaded", (() => {
+            if (navigator.userAgent.includes("Macintosh") || navigator.platform.toUpperCase().includes("MAC")) {
+                document.body.classList.add("macos");
+                console.log("macOS detected: class 'macos' added.");
+            } else console.log("Not macOS: no class added.");
+        }));
         const toggleLocationList = () => {
             const locationBlocks = document.querySelectorAll(".location-block");
             if (!locationBlocks.length) {
