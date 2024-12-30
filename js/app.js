@@ -7117,6 +7117,25 @@
         resetFilters();
         toggleLocationList();
         checkedCartAllCheckbox();
+        document.addEventListener("DOMContentLoaded", (() => {
+            const radioButtons = document.querySelectorAll(".order .options-info .options__input");
+            const contentContainers = {
+                1: document.querySelector(".fiz-inputs-content"),
+                2: document.querySelector(".yur-inputs-content")
+            };
+            function updateContentVisibility() {
+                radioButtons.forEach((radio => {
+                    const value = radio.value;
+                    if (radio.checked) contentContainers[value].classList.remove("hidden"); else contentContainers[value].classList.add("hidden");
+                    console.log(value);
+                    console.log(contentContainers);
+                }));
+            }
+            radioButtons.forEach((radio => {
+                radio.addEventListener("change", updateContentVisibility);
+            }));
+            updateContentVisibility();
+        }));
         window["FLS"] = true;
         addLoadedClass();
         menuInit();

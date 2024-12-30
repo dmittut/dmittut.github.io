@@ -14,11 +14,11 @@
 			opacity: 1;
 		}
 	</style>
-	<link rel="stylesheet" href="css/style.min.css?_v=20241228195913">
+	<link rel="stylesheet" href="css/style.min.css?_v=20241230210258">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<script src="https://cdn.tailwindcss.com?_v=20241228195913"></script>
+	<script src="https://cdn.tailwindcss.com?_v=20241230210258"></script>
 	<script>
 		tailwind.config = {
 			theme: {
@@ -772,32 +772,59 @@
 										<div class="line__header">
 											<h4>Данные покупателя</h4>
 										</div>
-										<div class="options mb-30">
-											<div class="options__item">
+										<div class="options options-info mb-30">
+
+											<div class="options__item option-fiz-item">
 												<input id="o_1" class="options__input" checked type="radio" value="1" name="option">
-												<label for="o_1" class="options__label"><span class="options__text">Физическое лицо</span></label>
+												<label for="o_1" class="options__label">
+													<span class="options__text">Физическое лицо</span>
+												</label>
+
 											</div>
-											<div class="options__item">
+											<div class="options__item option-yur-item">
 												<input id="o_2" class="options__input" type="radio" value="2" name="option">
 												<label for="o_2" class="options__label"><span class="options__text">Юридическое лицо</span></label>
 											</div>
 										</div>
-										<div class="line__inputs">
-											<div class="line__input">
-												<a href="#" class="order-have-account">
-													<i>
-														<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 101 101" id="user">
-															<path d="M50.4 54.5c10.1 0 18.2-8.2 18.2-18.2S60.5 18 50.4 18s-18.2 8.2-18.2 18.2 8.1 18.3 18.2 18.3zm0-31.7c7.4 0 13.4 6 13.4 13.4s-6 13.4-13.4 13.4S37 43.7 37 36.3s6-13.5 13.4-13.5zM18.8 83h63.4c1.3 0 2.4-1.1 2.4-2.4 0-12.6-10.3-22.9-22.9-22.9H39.3c-12.6 0-22.9 10.3-22.9 22.9 0 1.3 1.1 2.4 2.4 2.4zm20.5-20.5h22.4c9.2 0 16.7 6.8 17.9 15.7H21.4c1.2-8.9 8.7-15.7 17.9-15.7z" fill="currentColor"></path>
-														</svg>
-													</i>
-													<span>Есть учетная запись? Войти</span>
-												</a>
+										<div class="options-content">
+											<div class="line__inputs fiz-inputs-content">
+												<div class="line__input">
+													<a href="#" class="order-have-account">
+														<i>
+															<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 101 101" id="user">
+																<path d="M50.4 54.5c10.1 0 18.2-8.2 18.2-18.2S60.5 18 50.4 18s-18.2 8.2-18.2 18.2 8.1 18.3 18.2 18.3zm0-31.7c7.4 0 13.4 6 13.4 13.4s-6 13.4-13.4 13.4S37 43.7 37 36.3s6-13.5 13.4-13.5zM18.8 83h63.4c1.3 0 2.4-1.1 2.4-2.4 0-12.6-10.3-22.9-22.9-22.9H39.3c-12.6 0-22.9 10.3-22.9 22.9 0 1.3 1.1 2.4 2.4 2.4zm20.5-20.5h22.4c9.2 0 16.7 6.8 17.9 15.7H21.4c1.2-8.9 8.7-15.7 17.9-15.7z" fill="currentColor"></path>
+															</svg>
+														</i>
+														<span>Есть учетная запись? Войти</span>
+													</a>
+
+													<p class="lg:text-lg md:text-base text-sm mt-2.5">Нет учетной записи? <a href="#" class="link-red lg:!text-lg md:!text-base !text-sm"> Зарегистрируйтесь</a></p>
+												</div>
+												<div class="line__input">
+													<input autocomplete="off" type="text" name="form[]" placeholder="+ 7 (896) 569-54-53" class="custom-input">
+												</div>
+												<div class="line__input">
+													<input autocomplete="off" type="text" name="form[]" placeholder="E-mail" class="custom-input">
+												</div>
 											</div>
-											<div class="line__input">
-												<input autocomplete="off" type="text" name="form[]" placeholder="+ 7 (896) 569-54-53" class="custom-input">
-											</div>
-											<div class="line__input">
-												<input autocomplete="off" type="text" name="form[]" placeholder="E-mail" class="custom-input">
+											<div class="line__inputs yur-inputs-content">
+												<div class="bg-[#CF102D]/20 border-[#C1C1C1] md:p-5 p-3 md:rounded-2xl rounded-lg mb-4 max-w-[25rem]">
+													<p class="md:text-base text-sm">
+														Чтобы оформить заказ как юридическое лицо, вам нужно сначала <a href="#" class="link-red md:!text-base !text-sm">
+															зарегистрироваться
+														</a>
+													</p>
+												</div>
+												<div class="line__input">
+													<a href="#" class="order-have-account">
+														<i>
+															<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 101 101" id="user">
+																<path d="M50.4 54.5c10.1 0 18.2-8.2 18.2-18.2S60.5 18 50.4 18s-18.2 8.2-18.2 18.2 8.1 18.3 18.2 18.3zm0-31.7c7.4 0 13.4 6 13.4 13.4s-6 13.4-13.4 13.4S37 43.7 37 36.3s6-13.5 13.4-13.5zM18.8 83h63.4c1.3 0 2.4-1.1 2.4-2.4 0-12.6-10.3-22.9-22.9-22.9H39.3c-12.6 0-22.9 10.3-22.9 22.9 0 1.3 1.1 2.4 2.4 2.4zm20.5-20.5h22.4c9.2 0 16.7 6.8 17.9 15.7H21.4c1.2-8.9 8.7-15.7 17.9-15.7z" fill="currentColor"></path>
+															</svg>
+														</i>
+														<span>Есть учетная запись? Войти</span>
+													</a>
+												</div>
 											</div>
 										</div>
 									</div>
@@ -869,74 +896,18 @@
 									</div>
 									<div class="line__content flex-1">
 
-
-										<div class="order__conditions _showmore-active" data-showmore>
+										<!-- data-showmore -->
+										<div class="order__conditions _showmore-active">
 											<div class="cart-conditions ">
-												<div class="cart-conditions__header flex items-center gap-3 justify-between" data-showmore-button>
+												<!-- data-showmore-button -->
+												<div class="cart-conditions__header flex items-center gap-3 justify-between !cursor-default">
 													<h6 class="mb-0">Условия заказа</h6>
-													<i>
-														<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
-															<path d="M12 17.414 3.293 8.707l1.414-1.414L12 14.586l7.293-7.293 1.414 1.414L12 17.414z" />
-														</svg>
-													</i>
+													<!-- <i>
+                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M12 17.414 3.293 8.707l1.414-1.414L12 14.586l7.293-7.293 1.414 1.414L12 17.414z"/></svg>
+                            </i> -->
 												</div>
 												<div class="cart-conditions__body" data-showmore-content="0">
-													<div class="row-order">
-														<div class="row-order__card card">
-															<div class="card__body">
-																<a href="#" class="card__image">
-																	<img src="img/goods/image-2.webp" alt="Image">
-																</a>
-																<div class="card__content">
-																	<div class="card__desc">
-																		<h5>Масло моторное </h5>
-																		<p>LUKOIL GENESIS UNIVERSAL 10W-40</p>
-																	</div>
-																	<div class="card__more">
 
-																		<div class="card__price">
-																			<div class="price-box price-box--md">
-
-																				<div class="price">
-																					1736,00&nbsp;₽
-																				</div>
-																			</div>
-																		</div>
-																		<div class="card__count">
-																			<span>1 шт.</span>
-																		</div>
-																	</div>
-																</div>
-															</div>
-														</div>
-														<div class="row-order__card card">
-															<div class="card__body">
-																<a href="#" class="card__image">
-																	<img src="img/goods/image-2.webp" alt="Image">
-																</a>
-																<div class="card__content">
-																	<div class="card__desc">
-																		<h5>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum, velit! </h5>
-																		<p>LUKOIL GENESIS UNIVERSAL 10W-40</p>
-																	</div>
-																	<div class="card__more">
-
-																		<div class="card__price">
-																			<div class="price-box price-box--md">
-
-																				<div class="price">
-																					1736,00&nbsp;₽
-																				</div>
-																			</div>
-																		</div>
-																		<div class="card__count">
-																			<span>1 шт.</span>
-																		</div>
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
 													<div class="cart-conditions__row">
 														<div class="total-row">
 															<b>Итого:</b>
@@ -1184,7 +1155,7 @@
 			</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20241228195913"></script>
+	<script src="js/app.min.js?_v=20241230210258"></script>
 </body>
 
 </html>
