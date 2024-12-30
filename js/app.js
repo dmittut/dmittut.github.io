@@ -6964,6 +6964,8 @@
         }
         const da = new DynamicAdapt("max");
         da.init();
+        if (navigator.userAgent.includes("Macintosh")) document.body.classList.add("macos");
+        if (navigator.platform.toUpperCase().includes("MAC")) document.body.classList.add("macos");
         const toggleLocationList = () => {
             const locationBlocks = document.querySelectorAll(".location-block");
             if (!locationBlocks.length) {

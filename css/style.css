@@ -1552,12 +1552,15 @@ body::after {
 .header-logo .logo::before {
   content: "";
   left: -18%;
-  background: url(../img/header-lines/left-line.webp) 0 0 no-repeat
+  background: url(../img/header-lines/left-line.png) 0 0 no-repeat
+}
+.macos .header-logo .logo::before {
+  left: -16%
 }
 .header-logo .logo::after {
   content: "";
   right: -85%;
-  background: url(../img/header-lines/left-line.webp) 0 0 no-repeat
+  background: url(../img/header-lines/left-line.png) 0 0 no-repeat
 }
 .header-contacts__phone {
   font-weight: 500
@@ -1771,7 +1774,7 @@ body::after {
   position: absolute;
   bottom: -1.25rem;
   left: -1rem;
-  background: url(../img/banners/line.webp) 0 0 no-repeat
+  background: url(../img/banners/line.png) 0 0 no-repeat
 }
 .main-page__content .content-main__banners .slide-login .slide__body {
   position: relative
@@ -1784,7 +1787,7 @@ body::after {
   position: absolute;
   right: 0;
   bottom: 0;
-  background: url(../img/banners/login.webp) 0 0 no-repeat
+  background: url(../img/banners/login.png) 0 0 no-repeat
 }
 .main-page__content .content-main__banners .slide-banner {
   transition: all .3s
@@ -4631,7 +4634,7 @@ body::after {
     right: 1rem;
     width: 45%;
     height: 75%;
-    background: url(../img/banners/login-mob.webp) right/contain no-repeat
+    background: url(../img/banners/login-mob.png) right/contain no-repeat
   }
   .main-page__content .content-main__banners .banners-main__slider .slide-login {
     display: none
