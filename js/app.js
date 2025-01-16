@@ -981,6 +981,32 @@
                 } else if (input.classList.contains("min-3") && input.value.length < 3) {
                     this.addError(input, this.errorMessages.minLength);
                     error++;
+                } else if (input.classList.contains("input-password") || input.classList.contains("input-password-confirm")) {
+                    const passwordField = document.querySelector(".input-password");
+                    const confirmPasswordField = document.querySelector(".input-password-confirm");
+                    if (passwordField && confirmPasswordField) if (passwordField.value.trim() === "" || confirmPasswordField.value.trim() === "") {
+                        this.addError(input, this.errorMessages.required);
+                        error++;
+                    } else if (passwordField.value !== confirmPasswordField.value) {
+                        this.addError(confirmPasswordField, this.errorMessages.passwordMismatch);
+                        error++;
+                    } else {
+                        this.removeError(passwordField);
+                        this.removeError(confirmPasswordField);
+                    }
+                } else if (input.classList.contains("input-password-2") || input.classList.contains("input-password-confirm-2")) {
+                    const passwordField2 = document.querySelector(".input-password-2");
+                    const confirmPasswordField2 = document.querySelector(".input-password-confirm-2");
+                    if (passwordField2 && confirmPasswordField2) if (passwordField2.value.trim() === "" || confirmPasswordField2.value.trim() === "") {
+                        this.addError(input, this.errorMessages.required);
+                        error++;
+                    } else if (passwordField2.value !== confirmPasswordField2.value) {
+                        this.addError(confirmPasswordField2, this.errorMessages.passwordMismatch);
+                        error++;
+                    } else {
+                        this.removeError(passwordField2);
+                        this.removeError(confirmPasswordField2);
+                    }
                 } else if (!input.value.trim()) {
                     this.addError(input, this.errorMessages.required);
                     error++;
