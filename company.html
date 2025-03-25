@@ -302,7 +302,6 @@
 			</div>
 
 		</header>
-
 		<div class="catalog-menu">
 
 			<div class="catalog-menu__container">
@@ -754,260 +753,311 @@
 
 		</div>
 		<!-- /.catalog-menu -->
-		<main class="page page-order">
-			<div class="order">
-				<div class="order__container">
-					<div class="order__header">
-						<h2>Оформление заказа</h2>
-					</div>
-					<div class="order__content">
-						<div class="order__column">
+		<main class="page">
 
-							<form action="#" class="order__form form" method="POST">
-								<div class="form__line line">
-									<div class="line__step active">
-										<span>1</span>
+			<section class="main-page">
+				<div class="main-page__container">
+					<div class="main-page__wrapper relative catalog-menu-wrap">
+						<aside class="main-page__sidebar sidebar-main">
+							<div class="sidebar-main__body">
+								<div class="sidebar-main__header flex flex-col gap-2 items-start mb-5">
+									<button type="button" class="button button-lg button-primary button-catalog">
+										<span>Каталог</span>
+										<span>Закрыть</span>
+									</button>
+									<div class="search-block">
+										<div class="search-block-group input-group">
+											<input type="text" class="search-input" placeholder="Поиск по сайту">
+											<button type="button" class="input-group-button">
+												<svg class="action-item__svg">
+													<use xlink:href="img/icons/icons.svg#search"></use>
+												</svg>
+											</button>
+										</div>
+
 									</div>
-									<div class="line__content">
-										<div class="line__header">
-											<h4>Данные покупателя</h4>
-										</div>
-										<div class="options options-info mb-30">
+								</div>
+								<div class="sidebar-main__content">
+									<div data-showmore="items" class="sidebar-brands">
+										<div data-showmore-content="5" class="sidebar-brands__content">
+											<ul>
+												<li><a href="#">Лукойл</a></li>
+												<li>
+													<a href="#">
+														Toboil
 
-											<div class="options__item option-fiz-item">
-												<input id="o_1" class="options__input" checked type="radio" value="1" name="option">
-												<label for="o_1" class="options__label">
-													<span class="options__text">Физическое лицо</span>
-												</label>
-
-											</div>
-											<div class="options__item option-yur-item">
-												<input id="o_2" class="options__input" type="radio" value="2" name="option">
-												<label for="o_2" class="options__label"><span class="options__text">Юридическое лицо</span></label>
-											</div>
-										</div>
-										<div class="options-content">
-											<div class="line__inputs fiz-inputs-content">
-												<div class="line__input">
-													<a href="#" class="order-have-account">
-														<i>
-															<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 101 101" id="user">
-																<path d="M50.4 54.5c10.1 0 18.2-8.2 18.2-18.2S60.5 18 50.4 18s-18.2 8.2-18.2 18.2 8.1 18.3 18.2 18.3zm0-31.7c7.4 0 13.4 6 13.4 13.4s-6 13.4-13.4 13.4S37 43.7 37 36.3s6-13.5 13.4-13.5zM18.8 83h63.4c1.3 0 2.4-1.1 2.4-2.4 0-12.6-10.3-22.9-22.9-22.9H39.3c-12.6 0-22.9 10.3-22.9 22.9 0 1.3 1.1 2.4 2.4 2.4zm20.5-20.5h22.4c9.2 0 16.7 6.8 17.9 15.7H21.4c1.2-8.9 8.7-15.7 17.9-15.7z" fill="currentColor"></path>
-															</svg>
-														</i>
-														<span>Есть учетная запись? Войти</span>
 													</a>
+												</li>
+												<li>
+													<a href="#">
+														Rowe
 
-													<p class="lg:text-lg md:text-base text-sm mt-2.5">Нет учетной записи? <a href="#" class="link-red lg:!text-lg md:!text-base !text-sm"> Зарегистрируйтесь</a></p>
-												</div>
-												<div class="line__input">
-													<input autocomplete="off" type="text" name="form[]" placeholder="+ 7 (896) 569-54-53" class="custom-input">
-												</div>
-												<div class="line__input">
-													<input autocomplete="off" type="text" name="form[]" placeholder="E-mail" class="custom-input">
-												</div>
-											</div>
-											<div class="line__inputs yur-inputs-content">
-												<div class="bg-[#CF102D]/20 border-[#C1C1C1] md:p-5 p-3 md:rounded-2xl rounded-lg mb-4 max-w-[25rem]">
-													<p class="md:text-base text-sm">
-														Чтобы оформить заказ как юридическое лицо, вам нужно сначала <a href="#" class="link-red md:!text-base !text-sm">
-															зарегистрироваться
-														</a>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														Mannol
+
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														Lomarc
+
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														Sakura
+
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														Masuma
+													</a>
+												</li>
+
+											</ul>
+										</div>
+										<button hidden data-showmore-button type="button" class="sidebar-brands__more"><span>Показать больше</span><span>Скрыть</span></button>
+									</div>
+								</div>
+
+							</div>
+						</aside>
+						<div class="main-page__content !mt-0">
+							<div class="jumbotron jumbotron-company">
+								<div class="jumbotron__background">
+									<img src="img/jumbotron/01.webp" alt="BG">
+								</div>
+								<div class="jumbotron__content">
+									<h1 class="jumbotron__title">
+										О компании
+									</h1>
+								</div>
+							</div>
+							<!-- /.jumbotron -->
+							<div class="company-benefits">
+								<div class="company-benefits__content">
+									<div class="company-benefits__list">
+										<div class="company-benefits__item item-benefit">
+											<div class="item-benefit__content">
+												<h3 class="item-benefit__title">
+													Компания
+												</h3>
+												<div class="item-benefit__text">
+													<p>
+														ООО "Магма", один из лидеров рынка по продаже автозапчастей в Дагестане
 													</p>
 												</div>
-												<div class="line__input">
-													<a href="#" class="order-have-account">
-														<i>
-															<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 101 101" id="user">
-																<path d="M50.4 54.5c10.1 0 18.2-8.2 18.2-18.2S60.5 18 50.4 18s-18.2 8.2-18.2 18.2 8.1 18.3 18.2 18.3zm0-31.7c7.4 0 13.4 6 13.4 13.4s-6 13.4-13.4 13.4S37 43.7 37 36.3s6-13.5 13.4-13.5zM18.8 83h63.4c1.3 0 2.4-1.1 2.4-2.4 0-12.6-10.3-22.9-22.9-22.9H39.3c-12.6 0-22.9 10.3-22.9 22.9 0 1.3 1.1 2.4 2.4 2.4zm20.5-20.5h22.4c9.2 0 16.7 6.8 17.9 15.7H21.4c1.2-8.9 8.7-15.7 17.9-15.7z" fill="currentColor"></path>
-															</svg>
-														</i>
-														<span>Есть учетная запись? Войти</span>
+											</div>
+										</div>
+										<div class="company-benefits__item item-benefit">
+											<div class="item-benefit__content">
+												<h3 class="item-benefit__title">
+													Клиенты
+												</h3>
+												<div class="item-benefit__text">
+													<p>
+														Мы всегда ради общаться с нашими клиентами. Если у вас есть какие-либо пожелания, предложения, замечания, мы обязательно примем их во внимание. Мы всегда открыты для обратной связи и благодарны вам за помощь в развитии компании.
+													</p>
+												</div>
+											</div>
+										</div>
+										<div class="company-benefits__item item-benefit">
+											<div class="item-benefit__content">
+												<h3 class="item-benefit__title">
+													Партнеры
+												</h3>
+												<div class="item-benefit__text">
+													<p>
+														Компания ООО "Магма" была основана в 2003 г. и является официальным дилером компании ООО "ЛЛК-Интернешнл" по реализации смазочных материалов "ЛУКОЙЛ".
+													</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- /.company-benefits -->
+							<div class="magma-features">
+								<div class="magma-features__content">
+									<h2 class="magma-features__title">
+										Магма сегодня
+									</h2>
+									<div class="magma-features__list">
+										<div class="magma-features__item item-feature">
+											<div class="item-feature__content">
+												<h3 class="item-feature__num">
+													60 000
+												</h3>
+												<p class="item-feature__text">
+													Посетителей сайта ежемесячно
+												</p>
+											</div>
+										</div>
+										<div class="magma-features__item item-feature">
+											<div class="item-feature__content">
+												<h3 class="item-feature__num">
+													48 000
+												</h3>
+												<p class="item-feature__text">
+													Товаров на складе
+												</p>
+											</div>
+										</div>
+										<div class="magma-features__item item-feature">
+											<div class="item-feature__content">
+												<h3 class="item-feature__num">
+													12
+												</h3>
+												<p class="item-feature__text">
+													Регионов присутствия
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- /.magma-features -->
+							<div class="magma-info">
+								<div class="magma-info__content">
+									<div class="magma-info__row">
+										<div class="magma-info__header">
+											<h2 class="magma-info__title">
+												Для клиентов
+											</h2>
+										</div>
+										<div class="magma-info__links">
+											<a href="#" class="magma-info__link">
+												Наши клиенты - в центре всего, что мы делаем
+											</a>
+											<a href="#" class="magma-info__link">
+												Доверие — главное. Мы строим долгосрочные отношения
+											</a>
+											<a href="#" class="magma-info__link">
+												Открыты для предложений и улучшений
+											</a>
+										</div>
+									</div>
+									<div class="magma-info__row">
+										<div class="magma-info__header">
+											<h2 class="magma-info__title">
+												Для партнеров
+											</h2>
+										</div>
+										<div class="magma-info__links">
+											<a href="#" class="magma-info__link">
+												Наши клиенты - в центре всего, что мы делаем
+											</a>
+											<a href="#" class="magma-info__link">
+												Работаем, соблюдая этику бизнеса
+											</a>
+											<a href="#" class="magma-info__link">
+												Уважаем других мнения и интересы
+											</a>
+											<a href="#" class="magma-info__link">
+												Выполняем обязательства и берем ответственность за свои решения
+											</a>
+											<a href="#" class="magma-info__link">
+												Быстрая доставка
+											</a>
+											<a href="#" class="magma-info__link">
+												Низкие цены
+											</a>
+											<a href="#" class="magma-info__link">
+												Широкий ассортимент
+											</a>
+											<a href="#" class="magma-info__link">
+												Продукция от производителя
+											</a>
+										</div>
+									</div>
+									<div class="magma-info__row">
+										<div class="magma-info__header">
+											<h2 class="magma-info__title">
+												Для сотрудников
+											</h2>
+										</div>
+										<div class="magma-info__links">
+											<a href="#" class="magma-info__link">
+												Магма – территория личной и коллективной самореализации
+											</a>
+											<a href="#" class="magma-info__link">
+												Мы – одна команда
+											</a>
+											<a href="#" class="magma-info__link">
+												Уважаем мнение и интересы людей
+											</a>
+											<a href="#" class="magma-info__link">
+												Ценим свободу, смелость и ответственность
+											</a>
+										</div>
+									</div>
+
+								</div>
+							</div>
+							<!-- /.magma-info -->
+							<div class="content-main__contacts contacts-main-block section-margin-b-md">
+								<div class="contacts-main-block__content">
+									<span class="section-caption inline-block mb-6">
+										Наши контакты
+
+									</span>
+									<div class="contacts-main-block__body contacts-block">
+										<div class="contacts-block__line">
+											<span class="text-red font-extralight md:text-xl text-sm">
+												Телефон
+											</span>
+											<ul>
+												<li>
+													<a href="tel:+78722550506">
+														+7 (8722) 55-05-06
+
 													</a>
-												</div>
-											</div>
-										</div>
-									</div>
-
-								</div>
-								<div class="form__line line">
-									<div class="line__step active">
-										<span>2</span>
-									</div>
-									<div class="line__content">
-										<div class="line__header">
-											<h4>Выберите способ получения</h4>
-										</div>
-										<div class="options">
-											<div class="options__item">
-												<input id="o_3" class="options__input" checked type="radio" value="1" name="option">
-												<label for="o_3" class="options__label"><span class="options__text">Самовывоз в г. Махачкала</span></label>
-											</div>
-											<div class="options__item">
-												<input id="o_4" class="options__input" type="radio" value="2" name="option">
-												<label for="o_4" class="options__label"><span class="options__text">Доставка</span></label>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="form__line line">
-									<div class="line__step active">
-										<span>3</span>
-									</div>
-									<div class="line__content">
-										<div class="line__header">
-											<h4>Выберите способ оплаты</h4>
-										</div>
-										<div class="options mb-30">
-											<div class="options__item">
-												<input id="o_5" class="options__input" checked type="radio" value="1" name="option">
-												<label for="o_5" class="options__label"><span class="options__text">Картой онлайн</span></label>
-											</div>
-											<div class="options__item">
-												<input id="o_6" class="options__input" type="radio" value="2" name="option">
-												<label for="o_6" class="options__label"><span class="options__text">При получении</span></label>
-											</div>
-										</div>
-										<div class="line__payments">
-											<div class="options">
-												<div class="options__item">
-													<input id="p_1" class="options__input" checked type="radio" value="1" name="option">
-													<label for="p_1" class="options__label"><span class="options__logo"><img src="img/payments/youmoney.webp" alt="Image"></span></label>
-												</div>
-												<div class="options__item">
-													<input id="p_2" class="options__input" type="radio" value="2" name="option">
-													<label for="p_2" class="options__label"><span class="options__logo"><img src="img/payments/pay.webp" alt="Image"></span></label>
-												</div>
-												<div class="options__item">
-													<input id="p_3" class="options__input" type="radio" value="2" name="option">
-													<label for="p_3" class="options__label"><span class="options__logo"><img src="img/payments/sbp.webp" alt="Image"></span></label>
-												</div>
-												<div class="options__item">
-													<input id="p_4" class="options__input" type="radio" value="2" name="option">
-													<label for="p_4" class="options__label"><span class="options__logo"><img src="img/payments/mir.webp" alt="Image"></span></label>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="form__line line">
-									<div class="line__step active">
-										<span>4</span>
-									</div>
-									<div class="line__content flex-1">
-
-
-										<div class="order__conditions _showmore-active" data-showmore>
-											<div class="cart-conditions ">
-												<div class="cart-conditions__header flex items-center gap-3 justify-between" data-showmore-button>
-													<h6 class="mb-0">Условия заказа</h6>
-													<i>
-														<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
-															<path d="M12 17.414 3.293 8.707l1.414-1.414L12 14.586l7.293-7.293 1.414 1.414L12 17.414z" />
-														</svg>
-													</i>
-												</div>
-												<div class="cart-conditions__body" data-showmore-content="0">
-													<div class="row-order">
-														<div class="row-order__card card">
-															<div class="card__body">
-																<a href="#" class="card__image">
-																	<img src="img/goods/image-2.webp" alt="Image">
-																</a>
-																<div class="card__content">
-																	<div class="card__desc">
-																		<h5>Масло моторное </h5>
-																		<p>LUKOIL GENESIS UNIVERSAL 10W-40</p>
-																	</div>
-																	<div class="card__more">
-
-																		<div class="card__price">
-																			<div class="price-box price-box--md">
-
-																				<div class="price">
-																					1736,00&nbsp;₽
-																				</div>
-																			</div>
-																		</div>
-																		<div class="card__count">
-																			<span>1 шт.</span>
-																		</div>
-																	</div>
-																</div>
-															</div>
-														</div>
-														<div class="row-order__card card">
-															<div class="card__body">
-																<a href="#" class="card__image">
-																	<img src="img/goods/image-2.webp" alt="Image">
-																</a>
-																<div class="card__content">
-																	<div class="card__desc">
-																		<h5>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum, velit! </h5>
-																		<p>LUKOIL GENESIS UNIVERSAL 10W-40</p>
-																	</div>
-																	<div class="card__more">
-
-																		<div class="card__price">
-																			<div class="price-box price-box--md">
-
-																				<div class="price">
-																					1736,00&nbsp;₽
-																				</div>
-																			</div>
-																		</div>
-																		<div class="card__count">
-																			<span>1 шт.</span>
-																		</div>
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-													<div class="cart-conditions__row">
-														<div class="total-row">
-															<b>Итого:</b>
-															<div class="price-box price-box--md">
-
-																<div class="price">
-																	1736,00 ₽
-																</div>
-															</div>
-														</div>
-														<div class="total-price">
-
-														</div>
-													</div>
-
-												</div>
-												<div class="cart-conditions__footer">
-													<a href="#" class="button button-primary button-xl w-full">
-														Оформить заказ
+												</li>
+												<li>
+													<a href="tel:+79887940000">
+														+7 (988)794-00-00
 													</a>
-													<div class="order-policy">
-														<div class="checkbox">
-															<input id="c_1" class="checkbox__input" checked type="checkbox" value="1" name="form[]">
-															<label for="c_1" class="checkbox__label"><span class="checkbox__text">Нажимая на кнопку, вы соглашаетесь с договором публичной оферты и политикой обработки персональных данных</span></label>
-														</div>
-													</div>
-													<!-- <div class="cart-conditions__delivery">
-                              <p>Доставим на дом 14 июля (вт)</p>
-                            </div> -->
-												</div>
-											</div>
-											<!-- /.cart-conditions -->
+												</li>
+											</ul>
 										</div>
+										<div class="contacts-block__line">
+											<span class="text-red font-extralight md:text-xl text-sm">
+												Электронная почта
 
+											</span>
+											<ul>
+												<li>
+													<a href="mailto:magma1962@yandex.ru">
+														magma1962@yandex.ru
+
+													</a>
+												</li>
+											</ul>
+										</div>
+										<div class="contacts-block__line">
+											<span class="text-red font-extralight md:text-xl text-sm">
+												Адрес
+
+											</span>
+											<ul>
+												<li>
+													г. Махачкала, пр. Казбекова, д. 306
+												</li>
+											</ul>
+										</div>
 									</div>
 								</div>
-
-							</form>
+							</div>
+							<!-- /.content-main__contacts -->
 						</div>
-
 					</div>
 				</div>
-			</div>
-			<!-- /.order -->
+			</section>
+			<!-- /.main-page -->
 		</main>
 		<footer class="footer">
 			<div class="footer__container">
