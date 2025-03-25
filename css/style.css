@@ -2393,7 +2393,7 @@ body::after {
   font-size: 1.125rem
 }
 .cart-conditions__footer .button {
-  font-size: 1.25rem;
+  font-size: 1.25rem!important;
   font-weight: 700
 }
 .top-product-showmore:not(._showmore-no-init) .top-product-showmore__content {
