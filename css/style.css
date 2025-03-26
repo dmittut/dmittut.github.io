@@ -134,8 +134,7 @@ h6 {
 }
 .form__column {
   position: relative;
-  align-self: self-end;
-  height: 100%
+  align-self: self-end
 }
 .form__label {
   color: #000;
@@ -2868,17 +2867,13 @@ body::after {
   align-items: center;
   flex-wrap: wrap
 }
-.magma-info__links a {
+.magma-info__links > div {
   color: #000;
   font-weight: 400;
   line-height: 1.2;
   border-radius: 2rem;
   border: 1px solid #cf102d;
   transition: all .3s
-}
-.magma-info__links a:hover {
-  background-color: #cf102d;
-  color: #fff
 }
 .list-services .slider-button-1 {
   position: absolute;
@@ -3638,7 +3633,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   .magma-info__row {
     margin-bottom: 1.75rem
   }
-  .magma-info__links a {
+  .magma-info__links > div {
     font-size: 1.125rem
   }
   .list-services .sto-images__slider .swiper-slide img {
@@ -3771,6 +3766,53 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   }
   .registration-content__main .main-register__footer {
     max-width: 60rem
+  }
+}
+@media screen and (min-width:768px) {
+  .form__column {
+    height: 100%
+  }
+  .jumbotron.jumbotron-company {
+    margin-bottom: 3rem
+  }
+  .jumbotron__background {
+    border-radius: 10px
+  }
+  .jumbotron__background img {
+    border-radius: 10px
+  }
+  .company-benefits {
+    margin-bottom: 5rem
+  }
+  .company-benefits__list {
+    gap: 1.25rem
+  }
+  .magma-features {
+    margin-bottom: 5rem
+  }
+  .magma-features__list {
+    border-radius: .75rem
+  }
+  .magma-info__links {
+    gap: .75rem
+  }
+  .magma-info__links > div {
+    padding: .625rem 1.25rem
+  }
+  .list-services__benefits {
+    padding: 1.5rem .75rem;
+    margin-bottom: 2rem
+  }
+  .list-services__benefit .item-benefit__header {
+    gap: .875rem
+  }
+  .list-services__benefit .item-benefit__icon img {
+    width: 2.75rem;
+    height: 2.75rem
+  }
+  .certificates-list__list {
+    grid-template-columns: repeat(3,1fr);
+    gap: 1.25rem
   }
 }
 @media (min-width:768px) {
@@ -4149,50 +4191,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 @media (min-width:768px) and (min-width:108.25em) {
   .footer__menu {
     margin-bottom: 7.5rem
-  }
-}
-@media screen and (min-width:768px) {
-  .jumbotron.jumbotron-company {
-    margin-bottom: 3rem
-  }
-  .jumbotron__background {
-    border-radius: 10px
-  }
-  .jumbotron__background img {
-    border-radius: 10px
-  }
-  .company-benefits {
-    margin-bottom: 5rem
-  }
-  .company-benefits__list {
-    gap: 1.25rem
-  }
-  .magma-features {
-    margin-bottom: 5rem
-  }
-  .magma-features__list {
-    border-radius: .75rem
-  }
-  .magma-info__links {
-    gap: .75rem
-  }
-  .magma-info__links a {
-    padding: .625rem 1.25rem
-  }
-  .list-services__benefits {
-    padding: 1.5rem .75rem;
-    margin-bottom: 2rem
-  }
-  .list-services__benefit .item-benefit__header {
-    gap: .875rem
-  }
-  .list-services__benefit .item-benefit__icon img {
-    width: 2.75rem;
-    height: 2.75rem
-  }
-  .certificates-list__list {
-    grid-template-columns: repeat(3,1fr);
-    gap: 1.25rem
   }
 }
 @media (min-width:992px) {
@@ -5352,7 +5350,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   .magma-info__links {
     gap: .375rem
   }
-  .magma-info__links a {
+  .magma-info__links > div {
     padding: .375rem .875rem
   }
   .list-services__benefits {
@@ -5908,7 +5906,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   .magma-info__row {
     margin-bottom: 1rem
   }
-  .magma-info__links a {
+  .magma-info__links > div {
     font-size: .625rem
   }
   .list-services .sto-images__slider .swiper-slide img {
@@ -6336,12 +6334,12 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     }
   }
   @supports (font-size:clamp(0.625rem ,0.5116855524rem + 0.566572238vw ,1.125rem)) {
-    .magma-info__links a {
+    .magma-info__links > div {
       font-size: clamp(.625rem ,.5116855524rem + .566572238vw ,1.125rem)
     }
   }
   @supports not (font-size:clamp(0.625rem ,0.5116855524rem + 0.566572238vw ,1.125rem)) {
-    .magma-info__links a {
+    .magma-info__links > div {
       font-size: calc(.625rem + .5 * (100vw - 20rem)/ 88.25)
     }
   }
