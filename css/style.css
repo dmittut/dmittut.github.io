@@ -2875,6 +2875,11 @@ body::after {
   border: 1px solid #cf102d;
   transition: all .3s
 }
+.contacts-main-block__wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.25rem
+}
 .list-services .slider-button-1 {
   position: absolute;
   top: 50%;
@@ -2945,6 +2950,13 @@ body::after {
 }
 .certificates-list__list {
   display: grid
+}
+.certificates-list__list .item-certificate__image {
+  border-radius: .75rem;
+  border: 1px solid rgba(207,16,45,.2)
+}
+.certificates-list__list .item-certificate__image img {
+  border-radius: .75rem
 }
 .swiper {
   overflow: hidden
@@ -3798,6 +3810,9 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   }
   .magma-info__links > div {
     padding: .625rem 1.25rem
+  }
+  .contacts-main-block__wrapper .contacts-block {
+    max-width: 31.875rem
   }
   .list-services__benefits {
     padding: 1.5rem .75rem;
@@ -5352,6 +5367,9 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   }
   .magma-info__links > div {
     padding: .375rem .875rem
+  }
+  .contacts-main-block__wrapper {
+    flex-direction: column!important
   }
   .list-services__benefits {
     padding: 1rem .75rem;
